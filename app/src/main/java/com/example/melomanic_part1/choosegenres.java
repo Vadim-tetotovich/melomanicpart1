@@ -90,6 +90,7 @@ public class choosegenres extends AppCompatActivity {
                 editor.putString("button1", button1);
                 editor.putString("button2", button2);
                 editor.putString("button3", button3);
+                editor.putBoolean("openApp", true);
                 editor.apply();
                 Intent intent = new Intent(this, MainDisplay.class);
                 startActivity(intent);
