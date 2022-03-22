@@ -81,7 +81,14 @@ public class choosegenres extends AppCompatActivity {
         letsGoBtn = findViewById(R.id.lets_go_btn);
         letsGoBtn.setOnClickListener(view -> {
             if (this.selectedButtons.size() == 3) {
-
+                String button1 = selectedButtons.get(0).getText().toString();
+                String button2 = selectedButtons.get(1).getText().toString();
+                String button3 = selectedButtons.get(2).getText().toString();
+                @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("button1", button1);
+                editor.putString("button2", button2);
+                editor.putString("button3", button3);
+                editor.apply();
                 Intent intent = new Intent(this, MainDisplay.class);
                 startActivity(intent);
             }
