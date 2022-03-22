@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
@@ -22,7 +25,7 @@ public class choosegenres extends AppCompatActivity {
     public SharedPreferences mSettings;
 
     Button rockBtn, popBtn, indieBtn, punkBtn, russianBtn, hiphopBtn, btn2000s, btn2010s, btn90s, btn80s, letsGoBtn;
-    int countChossedGenres = 0;
+    ArrayList<Button> selectedButtons = new ArrayList<>();
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -41,8 +44,17 @@ public class choosegenres extends AppCompatActivity {
 
 
         OnClickListener onClickListener = view -> {
-            view.setBackgroundColor(getResources().getColor(R.color.choose_btn_backcolor_active));
-            countChossedGenres++;
+            Button button = (Button)view;
+            if (this.selectedButtons.contains(button))
+            {
+                view.setBackgroundColor(getResources().getColor(R.color.choose_btn_backcolor_default));
+                this.selectedButtons.remove(button);
+            }
+            else if (this.selectedButtons.size() < 3)
+            {
+                view.setBackgroundColor(getResources().getColor(R.color.choose_btn_backcolor_active));
+                this.selectedButtons.add(button);
+            }
         };
 
         rockBtn = findViewById(R.id.btn_choose_rock);
@@ -68,8 +80,10 @@ public class choosegenres extends AppCompatActivity {
 
         letsGoBtn = findViewById(R.id.lets_go_btn);
         letsGoBtn.setOnClickListener(view -> {
-            if (countChossedGenres == 3) {
+            if (this.selectedButtons.size() == 3) {
 
+                Intent intent = new Intent(this, MainDisplay.class);
+                startActivity(intent);
             }
         });
 
