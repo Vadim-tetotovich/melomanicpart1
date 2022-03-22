@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/background_main_display"
             android:layout_width="592dp"
             android:layout_height="923dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +29,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.626"
             app:srcCompat="@drawable/backmain" />
+
+        <TextView
+            android:id="@+id/title_melomaniac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:text="@string/app_title"
+            android:textColor="@color/btn_continue_color"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/home_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="66dp"
@@ -50,20 +63,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.52"
-            app:srcCompat="@drawable/house" />
+            app:srcCompat="@drawable/house_active" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/play_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView3"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/user_icon"
+            app:layout_constraintStart_toEndOf="@+id/home_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/play" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/user_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="66dp"
@@ -73,7 +86,7 @@
             app:srcCompat="@drawable/user" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/line"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@color/default_track"
