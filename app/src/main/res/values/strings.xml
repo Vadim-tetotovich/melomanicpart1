@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">melomanic-part1</string>
+    <string name="greeting">Hello music lover!</string>
+    <string name="acquaintance">Let\'s get acquainted</string>
+    <string name="accept">I accept that songs may contain\nexplicit language</string>
+    <string name="placeholder_name">Name</string>
+    <string name="btn_continue">Continue</string>
+    <string name="choose_3_genres">Choose Up To 3 Favorite Genres</string>
+    <string name="choose_btn_ROCK">Rock</string>
+    <string name="choose_btn_POP">Pop</string>
+    <string name="choose_btn_INDIE">Indie</string>
+    <string name="choose_btn_PUNK">Punk</string>
+    <string name="choose_btn_RUSSIAN">Russian</string>
+    <string name="choose_btn_HIPHOP">Hip-Hop</string>
+    <string name="choose_btn_2010">2010s</string>
+    <string name="choose_btn_2000">2000s</string>
+    <string name="choose_btn_90">90s</string>
+    <string name="choose_btn_80">80s</string>
+    <string name="Lets_go">Let\'s go</string>
+</resources>
