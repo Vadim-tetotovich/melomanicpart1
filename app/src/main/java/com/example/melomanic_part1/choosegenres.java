@@ -39,13 +39,6 @@ public class choosegenres extends AppCompatActivity {
 
         textView.setText("Hi, " + perName + "!");
 
-//        View.OnClickListener onClickListener = new OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                view.setBackgroundColor(0x5B46FF);
-//            }
-//        }
-
 //        rockBtn.findViewById(R.id.btn_choose_rock).setOnClickListener(onClickListener);
 //        popBtn.findViewById(R.id.btn_choose_pop).setOnClickListener(onClickListener);
 //        indieBtn.findViewById(R.id.btn_choose_indie).setOnClickListener(onClickListener);
