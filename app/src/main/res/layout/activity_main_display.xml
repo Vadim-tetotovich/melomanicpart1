@@ -24,11 +24,47 @@
             android:layout_height="923dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintHorizontal_bias="0.147"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.626"
+            app:layout_constraintVertical_bias="0.642"
             app:srcCompat="@drawable/backmain" />
+
+        <Button
+            android:id="@+id/main_display_btn1"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_display_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/main_display_btn2"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_display_btn3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/title_melomaniac"
@@ -42,6 +78,24 @@
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/main_display_btn3"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
@@ -84,6 +85,7 @@ public class choosegenres extends AppCompatActivity {
                 String button1 = selectedButtons.get(0).getText().toString();
                 String button2 = selectedButtons.get(1).getText().toString();
                 String button3 = selectedButtons.get(2).getText().toString();
+
                 @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString("button1", button1);
                 editor.putString("button2", button2);
