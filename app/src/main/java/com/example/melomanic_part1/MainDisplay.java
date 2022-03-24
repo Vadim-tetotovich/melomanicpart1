@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
@@ -34,6 +35,13 @@ public class MainDisplay extends AppCompatActivity {
         button1.setText(sharedBtn1);
         button2.setText(sharedBtn2);
         button3.setText(sharedBtn3);
+
+        View play = findViewById(R.id.play_icon);
+
+        play.setOnClickListener(view -> {
+            Intent intent = new Intent(this, testActivity.class);
+            startActivity(intent);
+        });
 
     }
 }

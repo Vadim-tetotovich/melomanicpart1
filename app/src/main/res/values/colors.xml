@@ -16,4 +16,5 @@
     <color name="btn_continue_stroke_color">#454BB2</color>
     <color name="choose_btn_backcolor_default">#B3A9F5</color>
     <color name="choose_btn_backcolor_active">#5B46FF</color>
+    <color name="icon_default">#8B84C3</color>
 </resources>
