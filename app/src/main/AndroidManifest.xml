@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Melomanicpart1">
         <activity
+            android:name=".choose_categories_for_game"
+            android:exported="false" />
+        <activity
+            android:name=".BottomMenuLoad"
+            android:exported="false" />
+        <activity
             android:name=".testActivity"
             android:exported="false" />
         <activity

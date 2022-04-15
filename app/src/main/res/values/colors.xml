@@ -17,4 +17,7 @@
     <color name="choose_btn_backcolor_default">#B3A9F5</color>
     <color name="choose_btn_backcolor_active">#5B46FF</color>
     <color name="icon_default">#8B84C3</color>
+    <color name="back_categories">#C1B9F3</color>
+    <color name="categories_title">#121521</color>
+    <color name="line">#9D9C9E</color>
 </resources>

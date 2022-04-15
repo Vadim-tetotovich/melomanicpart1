@@ -36,12 +36,14 @@ public class MainDisplay extends AppCompatActivity {
         button2.setText(sharedBtn2);
         button3.setText(sharedBtn3);
 
-        View play = findViewById(R.id.play_icon);
+        
 
-        play.setOnClickListener(view -> {
-            Intent intent = new Intent(this, testActivity.class);
-            startActivity(intent);
-        });
+//        View play = findViewById(R.id.play_icon);
+
+//        play.setOnClickListener(view -> {
+//            Intent intent = new Intent(this, testActivity.class);
+//            startActivity(intent);
+//        });
 
     }
 }

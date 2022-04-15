@@ -28,7 +28,7 @@ public class Loading extends AppCompatActivity {
             @Override
             public void run() {
                 if (isOpenApp) {
-                    startActivity(new Intent(Loading.this, MainDisplay.class));
+                    startActivity(new Intent(Loading.this, choose_categories_for_game.class));
                 } else {
                     startActivity(new Intent(Loading.this, MainActivity.class));
                 }

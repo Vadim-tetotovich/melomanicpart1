@@ -21,23 +21,6 @@ public class testActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        ProgressBar progressBar = findViewById(R.id.progress_Bar);
 
-
-        final CountDownTimer countDownTimer = new CountDownTimer(11*1000, 100) {
-            @Override
-            public void onTick(long l) {
-                currentProgress += 1;
-                progressBar.setProgress(currentProgress);
-                progressBar.setMax(100);
-            }
-
-            @Override
-            public void onFinish() {
-                Toast.makeText(getApplicationContext(), "Progress Finished", Toast.LENGTH_LONG).show();
-            }
-        };
-
-        countDownTimer.start();
     }
 }
