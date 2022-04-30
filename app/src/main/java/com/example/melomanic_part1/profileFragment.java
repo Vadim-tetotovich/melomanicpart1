@@ -2,12 +2,13 @@ package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -30,6 +31,7 @@ public class profileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View viewProfile;
+    private View viewForBtn;
 
     public profileFragment() {
         // Required empty public constructor
@@ -81,7 +83,7 @@ public class profileFragment extends Fragment {
         TextView genre2 = this.viewProfile.findViewById(R.id.genres2);
         TextView genre3 = this.viewProfile.findViewById(R.id.genres3);
 
-        Button editGenresBtn = this.viewProfile.findViewById(R.id.edit_genres);
+        ImageButton editGenresBtn = this.viewProfile.findViewById(R.id.edit_genres);
 
         nameText.setText("Hello, " + personName + "!");
         genre1.setText(sharedBtn1);
@@ -89,7 +91,8 @@ public class profileFragment extends Fragment {
         genre3.setText(sharedBtn3);
 
         editGenresBtn.setOnClickListener(view -> {
-
+            Intent intent = new Intent(getActivity(),editGenres.class);
+            startActivity(intent);
         });
 
         return viewProfile;
