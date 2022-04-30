@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Melomanicpart1">
         <activity
+            android:name=".playMusic"
+            android:exported="false" />
+        <activity
             android:name=".editGenres"
             android:exported="false" />
         <activity

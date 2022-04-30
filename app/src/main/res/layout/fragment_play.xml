@@ -36,76 +36,82 @@
             app:layout_constraintTop_toBottomOf="@+id/textCategoryTitle">
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/rockPlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginBottom="13dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="rock"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+                app:layout_constraintBottom_toTopOf="@+id/indiePlayBtn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/rock_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/popPlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="92dp"
                 android:layout_marginBottom="13dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="pop"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+                app:layout_constraintBottom_toTopOf="@+id/punkPlayBtn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/pop_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/indiePlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="13dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="indie"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/rockPlayBtn"
                 app:srcCompat="@drawable/indie_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/punkPlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="punk"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/popPlayBtn"
                 app:srcCompat="@drawable/punk_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/russianPlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="russian"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+                app:layout_constraintTop_toBottomOf="@+id/indiePlayBtn"
                 app:srcCompat="@drawable/russian_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/hiphopPlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="12dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="hiphop"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/punkPlayBtn"
                 app:srcCompat="@drawable/hiphop_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
@@ -117,14 +123,15 @@
                 android:background="@color/line"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+                app:layout_constraintTop_toBottomOf="@+id/russianPlayBtn" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/s2010PlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="18dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="2010s"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view"
@@ -132,11 +139,12 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton9"
+                android:id="@+id/s2000PlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="18dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="2000s"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/view"
@@ -144,30 +152,32 @@
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton10"
+                android:id="@+id/s90PlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="102dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="90s"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+                app:layout_constraintTop_toBottomOf="@+id/s2010PlayBtn"
                 app:srcCompat="@drawable/_90_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/s80PlayBtn"
                 android:layout_width="160dp"
                 android:layout_height="91dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="102dp"
                 android:background="@android:color/transparent"
+                android:contentDescription="80s"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+                app:layout_constraintTop_toBottomOf="@+id/s2000PlayBtn"
                 app:srcCompat="@drawable/_80_btn"
                 tools:ignore="SpeakableTextPresentCheck" />
 
