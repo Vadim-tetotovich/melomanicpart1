@@ -47,10 +47,9 @@ public class playMusic extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("music");
-                            JSONObject empl = jsonArray.getJSONObject(0);
-                            String name = empl.getString("src");
-//                            Uri uri = Uri.parse(name);
-                            mPlayer = MediaPlayer.create(getApplicationContext(),getResources().getIdentifier(name, "raw", getPackageName()));
+                            JSONObject musics = jsonArray.getJSONObject(0);
+                            String src = musics.getString("src");
+                            mPlayer = MediaPlayer.create(getApplicationContext(),getResources().getIdentifier(src, "raw", getPackageName()));
                             mPlayer.start();
 //                            title.setText(name);
                         } catch (JSONException e) {

@@ -1,13 +1,14 @@
 {
-  "name": "Rock",
-  "music": [
-    {
-      "musicName": "",
-      "src": ""
-    },
-    {
-      "musicName": "",
-      "src": ""
-    }
-  ]
+  "rock": {
+    "music": [
+      {
+        "musicName": "arctic monkeys",
+        "src": "arctic_monkeys"
+      },
+      {
+        "musicName": "000",
+        "src": "R.raw.arctic_monkeys"
+      }
+    ]
+  }
 }
