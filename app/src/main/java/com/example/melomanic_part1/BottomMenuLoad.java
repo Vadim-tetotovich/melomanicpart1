@@ -3,8 +3,6 @@ package com.example.melomanic_part1;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,15 +13,11 @@ public class BottomMenuLoad extends AppCompatActivity implements BottomNavigatio
 
     BottomNavigationView bottomNavigationView;
 
-
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_menu_load);
-
-        Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
@@ -33,6 +27,8 @@ public class BottomMenuLoad extends AppCompatActivity implements BottomNavigatio
     }
 
     mainMenuFragment mainMenuFragment = new mainMenuFragment();
+    playFragment playFragment = new playFragment();
+    profileFragment profileFragment = new profileFragment();
 
     @SuppressLint("NonConstantResourceId")
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -43,11 +39,11 @@ public class BottomMenuLoad extends AppCompatActivity implements BottomNavigatio
                 return true;
 
             case R.id.page_2:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, secondFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, playFragment).commit();
                 return true;
 
             case R.id.page_3:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, thirdFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, profileFragment).commit();
                 return true;
         }
         return false;

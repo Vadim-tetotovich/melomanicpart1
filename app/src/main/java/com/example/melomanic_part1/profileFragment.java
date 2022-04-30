@@ -8,15 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link mainMenuFragment#newInstance} factory method to
+ * Use the {@link profileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class mainMenuFragment extends Fragment {
+public class profileFragment extends Fragment {
 
     public static final String APP_PREFERENCES = "FilePreferences";
 
@@ -28,9 +29,9 @@ public class mainMenuFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private View view;
+    private View viewProfile;
 
-    public mainMenuFragment() {
+    public profileFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +41,11 @@ public class mainMenuFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment mainMenuFragment.
+     * @return A new instance of fragment profileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static mainMenuFragment newInstance(String param1, String param2) {
-        mainMenuFragment fragment = new mainMenuFragment();
+    public static profileFragment newInstance(String param1, String param2) {
+        profileFragment fragment = new profileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,31 +62,37 @@ public class mainMenuFragment extends Fragment {
         }
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint({"UseCompatLoadingForDrawables", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        viewProfile = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        view = inflater.inflate(R.layout.fragment_main_menu, container, false);
         SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        String personName = sharedPreferences.getString("NAME", "unknown");
         String sharedBtn1 = sharedPreferences.getString("button1", "unknown");
         String sharedBtn2 = sharedPreferences.getString("button2", "unknown");
         String sharedBtn3 = sharedPreferences.getString("button3", "unknown");
 
-        this.view = inflater.inflate(R.layout.fragment_main_menu, container, false);
-        Button button1 = this.view.findViewById(R.id.main_display_btn1);
-        Button button2 = this.view.findViewById(R.id.main_display_btn2);
-        Button button3 = this.view.findViewById(R.id.main_display_btn3);
+        this.viewProfile = inflater.inflate(R.layout.fragment_profile, container, false);
+        TextView nameText = this.viewProfile.findViewById(R.id.profileText);
+        TextView genre1 = this.viewProfile.findViewById(R.id.genres1);
+        TextView genre2 = this.viewProfile.findViewById(R.id.genres2);
+        TextView genre3 = this.viewProfile.findViewById(R.id.genres3);
 
-        int imgRes = R.drawable.rockicon;
-        button1.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+        Button editGenresBtn = this.viewProfile.findViewById(R.id.edit_genres);
 
-        button1.setText(sharedBtn1);
-        button2.setText(sharedBtn2);
-        button3.setText(sharedBtn3);
+        nameText.setText("Hello, " + personName + "!");
+        genre1.setText(sharedBtn1);
+        genre2.setText(sharedBtn2);
+        genre3.setText(sharedBtn3);
 
-        return view;
+        editGenresBtn.setOnClickListener(view -> {
+
+        });
+
+        return viewProfile;
     }
 
 }

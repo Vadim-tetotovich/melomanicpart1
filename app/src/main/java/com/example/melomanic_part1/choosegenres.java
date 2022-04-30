@@ -1,20 +1,17 @@
 package com.example.melomanic_part1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class choosegenres extends AppCompatActivity {
@@ -40,8 +37,6 @@ public class choosegenres extends AppCompatActivity {
         String perName = sharedPref.getString("NAME", "unknown");
 
         textView.setText("Hi, " + perName + "!");
-
-
 
 
         OnClickListener onClickListener = view -> {

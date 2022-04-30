@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Melomanicpart1">
         <activity
+            android:name=".editGenres"
+            android:exported="false" />
+        <activity
             android:name=".choose_categories_for_game"
             android:exported="false" />
         <activity
@@ -17,9 +20,6 @@
             android:exported="false" />
         <activity
             android:name=".testActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainDisplay"
             android:exported="false" />
         <activity
             android:name=".choosegenres"
