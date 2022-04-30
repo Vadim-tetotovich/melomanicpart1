@@ -20,4 +20,6 @@
     <string name="app_title">MELOMANIAC</string>
     <string name="music_fact_title">Music Fact Of The Day</string>
     <string name="music_fact_text">Eminem\’s Rap God has the most words in a song, at a whopping 1,560 words.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

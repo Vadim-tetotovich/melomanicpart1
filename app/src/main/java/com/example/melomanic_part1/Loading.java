@@ -1,14 +1,12 @@
 package com.example.melomanic_part1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.window.SplashScreen;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Loading extends AppCompatActivity {
 
@@ -28,7 +26,7 @@ public class Loading extends AppCompatActivity {
             @Override
             public void run() {
                 if (isOpenApp) {
-                    startActivity(new Intent(Loading.this, choose_categories_for_game.class));
+                    startActivity(new Intent(Loading.this, BottomMenuLoad.class));
                 } else {
                     startActivity(new Intent(Loading.this, MainActivity.class));
                 }

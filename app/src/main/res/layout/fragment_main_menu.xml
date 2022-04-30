@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainMenuFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="592dp"
+            android:layout_height="923dp"
+            android:src="@drawable/backmain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.892" />
+
+        <TextView
+            android:id="@+id/title_melomaniac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="134dp"
+            android:layout_marginBottom="62dp"
+            android:fontFamily="@font/monomaniac_regular"
+            android:text="@string/app_title"
+            android:textColor="@color/btn_continue_color"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="272dp"
+            android:layout_height="136dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/music_fact_card"
+            android:paddingLeft="6dp"
+            android:paddingTop="16dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_display_btn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_melomaniac"
+            app:layout_constraintVertical_bias="0.646">
+
+            <TextView
+                android:id="@+id/music_fact_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularb_medium"
+                android:text="@string/music_fact_title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/paper_plane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/music_fact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/paper_plane" />
+
+            <TextView
+                android:id="@+id/music_fact"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularb_medium"
+                android:text="@string/music_fact_text"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.272"
+                app:layout_constraintStart_toEndOf="@+id/paper_plane" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/main_display_btn1"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_display_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/main_display_btn2"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_display_btn3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/main_display_btn3"
+            android:layout_width="272dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="116dp"
+            android:backgroundTint="@color/btn_continue_color"
+            android:fontFamily="@font/circularb_bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="24sp"
+            app:cornerRadius="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/btn_continue_stroke_color"
+            app:strokeWidth="2dp"
+            tools:ignore="SpeakableTextPresentCheck"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+
