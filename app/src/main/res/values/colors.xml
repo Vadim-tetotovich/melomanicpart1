@@ -20,4 +20,6 @@
     <color name="back_categories">#C1B9F3</color>
     <color name="categories_title">#121521</color>
     <color name="line">#9D9C9E</color>
+    <color name="correctly">#3DB532</color>
+    <color name="wrong">#FD0F0F</color>
 </resources>

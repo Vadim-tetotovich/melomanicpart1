@@ -22,10 +22,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/musicGenreTitle">
@@ -132,6 +133,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
@@ -144,11 +146,11 @@
                 android:layout_width="0dp"
                 android:layout_height="64dp"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/categories_title"
-                app:cornerRadius="17dp"
                 android:fontFamily="@font/circularb_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/categories_title"
                 android:textSize="20sp"
+                app:cornerRadius="17dp"
                 app:layout_constraintBottom_toTopOf="@+id/chooseBtn4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -162,11 +164,11 @@
                 android:layout_width="0dp"
                 android:layout_height="64dp"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/categories_title"
-                app:cornerRadius="17dp"
                 android:fontFamily="@font/circularb_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/categories_title"
                 android:textSize="20sp"
+                app:cornerRadius="17dp"
                 app:layout_constraintBottom_toTopOf="@+id/chooseBtn1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -211,6 +213,17 @@
                 app:strokeWidth="1dp"
                 tools:ignore="SpeakableTextPresentCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarForSong"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_height="8dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="35dp"
+            android:progressDrawable="@drawable/custom_progress_bar_song"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

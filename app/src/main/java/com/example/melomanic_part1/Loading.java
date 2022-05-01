@@ -22,16 +22,13 @@ public class Loading extends AppCompatActivity {
 
         isOpenApp = sharedPref.getBoolean("openApp", false);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (isOpenApp) {
-                    startActivity(new Intent(Loading.this, BottomMenuLoad.class));
-                } else {
-                    startActivity(new Intent(Loading.this, MainActivity.class));
-                }
-                finish();
+        new Handler().postDelayed(() -> {
+            if (isOpenApp) {
+                startActivity(new Intent(Loading.this, BottomMenuLoad.class));
+            } else {
+                startActivity(new Intent(Loading.this, MainActivity.class));
             }
+            finish();
         }, 2000);
     }
 }
