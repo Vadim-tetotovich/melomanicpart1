@@ -127,10 +127,90 @@
             android:layout_marginTop="70dp"
             android:indeterminateDrawable="@drawable/progress_animated_rotate"
             android:toDegrees="720"
-            android:animationResolution=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar4">
+
+            <Button
+                android:id="@+id/chooseBtn3"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/categories_title"
+                app:cornerRadius="17dp"
+                android:fontFamily="@font/circularb_medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/chooseBtn4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseBtn2"
+                app:strokeColor="@color/categories_title"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/chooseBtn2"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/categories_title"
+                app:cornerRadius="17dp"
+                android:fontFamily="@font/circularb_medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/chooseBtn1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseBtn3"
+                app:strokeColor="@color/categories_title"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/chooseBtn1"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/circularb_medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/categories_title"
+                android:textSize="20sp"
+                app:cornerRadius="17dp"
+                app:layout_constraintBottom_toTopOf="@+id/chooseBtn2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/categories_title"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/chooseBtn4"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/circularb_medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/categories_title"
+                android:textSize="20sp"
+                app:cornerRadius="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseBtn3"
+                app:strokeColor="@color/categories_title"
+                app:strokeWidth="1dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,286 @@
 {
-  "rock": {
+  "Rock": {
     "music": [
       {
-        "musicName": "arctic monkeys",
-        "src": "arctic_monkeys"
+        "musicName": "Black",
+        "src": "black"
       },
       {
-        "musicName": "000",
-        "src": "R.raw.arctic_monkeys"
+        "musicName": "505",
+        "src": "m_505"
+      },
+      {
+        "musicName": "Bring Me To Life",
+        "src": "bring_me_to_life"
+      },
+      {
+        "musicName": "Californication",
+        "src": "californication"
+      },
+      {
+        "musicName": "Can You Feel My Heart",
+        "src": "can_you_feel"
+      },
+      {
+        "musicName": "Come As You Are",
+        "src": "come_as_you_are"
+      },
+      {
+        "musicName": "Dakota",
+        "src": "dakota"
+      },
+      {
+        "musicName": "Disco 2000",
+        "src": "disco_2000"
+      },
+      {
+        "musicName": "Dreams - 2004 Remaster",
+        "src": "dreams"
+      },
+      {
+        "musicName": "Everything's Electric",
+        "src": "everythings_electric"
+      },
+      {
+        "musicName": "Freak On a Leash",
+        "src": "freak_on_a_leash"
+      },
+      {
+        "musicName": "Friday Im In Love",
+        "src": "friday_im_in_love"
+      },
+      {
+        "musicName": "Heart-Shaped Box",
+        "src": "heart_shaped_box"
+      },
+      {
+        "musicName": "Heroes - 2017 Remaster",
+        "src": "heroes"
+      },
+      {
+        "musicName": "In The End",
+        "src": "in_the_end"
+      },
+      {
+        "musicName": "Just Like Heaven",
+        "src": "just_like_heaven"
+      },
+      {
+        "musicName": "Just Tonight",
+        "src": "just_tonight"
+      },
+      {
+        "musicName": "Learn To Fly",
+        "src": "learn_to_fly"
+      },
+      {
+        "musicName": "Like a Rolling Stone",
+        "src": "like_a_rolling_stone"
+      },
+      {
+        "musicName": "Like a Stone",
+        "src": "like_a_stone"
+      },
+      {
+        "musicName": "Live forever",
+        "src": "live_forever"
+      },
+      {
+        "musicName": "Livin On A Player",
+        "src": "livin"
+      },
+      {
+        "musicName": "Losing My Religion",
+        "src": "losing_my_religion"
+      },
+      {
+        "musicName": "Make Me Wanna Die",
+        "src": "make_me_wanna_die"
+      },
+      {
+        "musicName": "Mellow Yellow",
+        "src": "mallow_yellow"
+      },
+      {
+        "musicName": "Me & Magdalena",
+        "src": "me_and_magdalena"
+      },
+      {
+        "musicName": "Mr. Brightside",
+        "src": "mr_brightside"
+      },
+      {
+        "musicName": "Riders On The Storm",
+        "src": "riders_on_the_storm"
+      },
+      {
+        "musicName": "Scar Tissue",
+        "src": "scar_tissue"
+      },
+      {
+        "musicName": "Shes A Rainbow",
+        "src": "she_is_rainbow"
+      },
+      {
+        "musicName": "Somebody To Love",
+        "src": "somebody_to_love"
+      },
+      {
+        "musicName": "Somebody Told Me",
+        "src": "somebody_told_me"
+      },
+      {
+        "musicName": "Sonne",
+        "src": "sonne"
+      },
+      {
+        "musicName": "Stockholm Hearts",
+        "src": "stockholm_hearts"
+      },
+      {
+        "musicName": "Supermassive Black Hole",
+        "src": "supermassive_blackhole"
+      },
+      {
+        "musicName": "The Pretender",
+        "src": "the_pretender"
+      },
+      {
+        "musicName": "Throne",
+        "src": "throne"
+      },
+      {
+        "musicName": "When You Were Young",
+        "src": "when_you_were_young"
+      },
+      {
+        "musicName": "Wish You Were Here",
+        "src": "wish_you_were_here"
+      },
+      {
+        "musicName": "Wonderwall",
+        "src": "wonderwall"
+      },
+      {
+        "musicName": "Would?",
+        "src": "would"
+      }
+    ]
+  },
+
+  "Pop": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "Punk": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "Russian": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "Indie": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "Hip-Hop": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "2010s": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "2000s": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "90s": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      }
+    ]
+  },
+
+  "80s": {
+    "music": [
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
       }
     ]
   }
