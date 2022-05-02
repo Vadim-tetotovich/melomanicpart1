@@ -3,6 +3,7 @@ package com.example.melomanic_part1;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -42,7 +43,7 @@ public class playMusic extends AppCompatActivity {
     JSONObject randomObject;
     String randomTitle;
     Dialog dialog;
-    int isCorrectSong = 0, scoreValueS = 0;
+    int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0;
     ProgressBar songProgressBar;
     Runnable runnable;
     Handler handlerProgress;
@@ -84,6 +85,15 @@ public class playMusic extends AppCompatActivity {
                 response -> {
                     try {
 
+                        if (handlerRunProgress != 0) {
+                            Thread.sleep(1000);
+                        }
+
+                        chooseBtn1.setTextColor(getResources().getColor(R.color.categories_title));
+                        chooseBtn2.setTextColor(getResources().getColor(R.color.categories_title));
+                        chooseBtn3.setTextColor(getResources().getColor(R.color.categories_title));
+                        chooseBtn4.setTextColor(getResources().getColor(R.color.categories_title));
+
 
                         level.setText((levelCount + 1) + " / 10");
                         String sc = "" + scoreValueS;
@@ -112,15 +122,18 @@ public class playMusic extends AppCompatActivity {
 
                         mPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(src, "raw", getPackageName()));
 
-                        runnable = new Runnable() {
-                            @Override
-                            public void run() {
-                                songProgressBar.setMax(mPlayer.getDuration());
-                                handlerProgress.postDelayed(runnable, 0);
-                                songProgressBar.setProgress(mPlayer.getCurrentPosition());
-                                handlerProgress.postDelayed(this, 100);
-                            }
-                        };
+                        if (handlerRunProgress < 1) {
+                            runnable = new Runnable() {
+                                @Override
+                                public void run() {
+                                    songProgressBar.setMax(mPlayer.getDuration());
+                                    handlerProgress.postDelayed(runnable, 0);
+                                    songProgressBar.setProgress(mPlayer.getCurrentPosition());
+                                    handlerProgress.postDelayed(this, 100);
+                                }
+                            };
+                        }
+                        handlerRunProgress++;
 
                         progressBarSong();
 
@@ -130,7 +143,7 @@ public class playMusic extends AppCompatActivity {
                         chooseBtn3.setOnClickListener(onClickListener);
                         chooseBtn4.setOnClickListener(onClickListener);
 
-                    } catch (JSONException e) {
+                    } catch (JSONException | InterruptedException e) {
                         e.printStackTrace();
                     }
                 }, Throwable::printStackTrace);
@@ -152,7 +165,6 @@ public class playMusic extends AppCompatActivity {
         };
 
     }
-
 
     Button.OnClickListener onClickListener = view -> {
             Button b = (Button) view;
@@ -181,7 +193,14 @@ public class playMusic extends AppCompatActivity {
             }
             mPlayer.stop();
 
-            new Handler().postDelayed(this::open, 700);
+        if (levelValue < 10) {
+            musicTitles.clear();
+            levelCount++;
+            playSong();
+        } else {
+            Intent intent = new Intent(this, BottomMenuLoad.class);
+            startActivity(intent);
+        }
     };
 
     private void open() {
@@ -227,6 +246,8 @@ public class playMusic extends AppCompatActivity {
                playSong();
            } else {
                dialog.dismiss();
+               Intent intent = new Intent(this, BottomMenuLoad.class);
+               startActivity(intent);
            }
        });
     }
