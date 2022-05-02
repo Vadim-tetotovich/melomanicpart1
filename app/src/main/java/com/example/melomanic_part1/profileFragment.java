@@ -98,6 +98,7 @@ public class profileFragment extends Fragment {
         genre3.setText(sharedBtn3);
 
 
+
         editGenresBtn.setOnClickListener(view -> {
             getActivity().finish();
             Intent intent = new Intent(getActivity(),editGenres.class);

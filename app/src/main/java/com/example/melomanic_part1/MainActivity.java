@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = mSettings.edit();
                 editor.putString("NAME", textInputNamePerson);
                 editor.apply();
-
+                finish();
                 Intent intent = new Intent(this, choosegenres.class);
                 startActivity(intent);
             }
