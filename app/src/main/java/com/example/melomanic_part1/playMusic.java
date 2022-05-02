@@ -32,6 +32,7 @@ public class playMusic extends AppCompatActivity {
     public static final String APP_PREFERENCES = "FilePreferences";
     String url = "https://api.jsonbin.io/b/626d79c025069545a32b468d/5";
 
+    SharedPreferences sharedPreferences;
     RequestQueue mQueue;
     TextView title, level, score;
     MediaPlayer mPlayer;
@@ -56,7 +57,7 @@ public class playMusic extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_music);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
         titleGenre = sharedPreferences.getString("thisGenre", "unknown");
 
@@ -137,7 +138,6 @@ public class playMusic extends AppCompatActivity {
 
                         progressBarSong();
 
-
                         chooseBtn1.setOnClickListener(onClickListener);
                         chooseBtn2.setOnClickListener(onClickListener);
                         chooseBtn3.setOnClickListener(onClickListener);
@@ -163,7 +163,6 @@ public class playMusic extends AppCompatActivity {
                 handlerProgress.postDelayed(this, 100);
             }
         };
-
     }
 
     Button.OnClickListener onClickListener = view -> {
@@ -198,7 +197,11 @@ public class playMusic extends AppCompatActivity {
             levelCount++;
             playSong();
         } else {
-            Intent intent = new Intent(this, BottomMenuLoad.class);
+            @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("EndScore", String.valueOf(scoreValueS));
+            editor.apply();
+            finish();
+            Intent intent = new Intent(this, end_game.class);
             startActivity(intent);
         }
     };

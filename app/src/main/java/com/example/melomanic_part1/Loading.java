@@ -1,5 +1,6 @@
 package com.example.melomanic_part1;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,6 +20,19 @@ public class Loading extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         SharedPreferences sharedPref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+
+        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("rockScore", "0");
+        editor.putString("popScore", "0");
+        editor.putString("indieScore", "0");
+        editor.putString("punkScore", "0");
+        editor.putString("russianScore", "0");
+        editor.putString("hiphopScore", "0");
+        editor.putString("s2010Score", "0");
+        editor.putString("s2000Score", "0");
+        editor.putString("s90Score", "0");
+        editor.putString("s80Score", "0");
+        editor.apply();
 
         isOpenApp = sharedPref.getBoolean("openApp", false);
 

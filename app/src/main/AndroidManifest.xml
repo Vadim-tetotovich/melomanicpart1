@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Melomanicpart1">
         <activity
+            android:name=".end_game"
+            android:exported="false" />
+        <activity
             android:name=".playMusic"
             android:exported="false" />
         <activity
