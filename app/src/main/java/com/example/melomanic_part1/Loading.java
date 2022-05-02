@@ -14,25 +14,14 @@ public class Loading extends AppCompatActivity {
     public static final String APP_PREFERENCES = "FilePreferences";
 
     boolean isOpenApp = false;
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences sharedPref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        sharedPref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("rockScore", "0");
-        editor.putString("popScore", "0");
-        editor.putString("indieScore", "0");
-        editor.putString("punkScore", "0");
-        editor.putString("russianScore", "0");
-        editor.putString("hiphopScore", "0");
-        editor.putString("s2010Score", "0");
-        editor.putString("s2000Score", "0");
-        editor.putString("s90Score", "0");
-        editor.putString("s80Score", "0");
-        editor.apply();
 
         isOpenApp = sharedPref.getBoolean("openApp", false);
 
@@ -40,6 +29,18 @@ public class Loading extends AppCompatActivity {
             if (isOpenApp) {
                 startActivity(new Intent(Loading.this, BottomMenuLoad.class));
             } else {
+                @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("rockScore", "0");
+                editor.putString("popScore", "0");
+                editor.putString("indieScore", "0");
+                editor.putString("punkScore", "0");
+                editor.putString("russianScore", "0");
+                editor.putString("hiphopScore", "0");
+                editor.putString("s2010Score", "0");
+                editor.putString("s2000Score", "0");
+                editor.putString("s90Score", "0");
+                editor.putString("s80Score", "0");
+                editor.apply();
                 startActivity(new Intent(Loading.this, MainActivity.class));
             }
             finish();

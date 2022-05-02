@@ -70,43 +70,43 @@ public class end_game extends AppCompatActivity {
         switch (thisGenre) {
             case "Rock":
                 avatar80.setImageResource(R.drawable.rock80);
-                checkedScore(rockScore);
+                checkedScore("rock", rockScore);
                 break;
             case "Pop":
                 avatar80.setImageResource(R.drawable.pop80);
-                checkedScore(popScore);
+                checkedScore("pop", popScore);
                 break;
             case "Punk":
                 avatar80.setImageResource(R.drawable.punk80);
-                checkedScore(punkScore);
+                checkedScore("punk", punkScore);
                 break;
             case "Indie":
                 avatar80.setImageResource(R.drawable.indie80);
-                checkedScore(indieScore);
+                checkedScore("indie", indieScore);
                 break;
             case "Russian":
                 avatar80.setImageResource(R.drawable.russian80);
-                checkedScore(russianScore);
+                checkedScore("russian", russianScore);
                 break;
             case "Hip-Hop":
                 avatar80.setImageResource(R.drawable.hiphop80);
-                checkedScore(hiphopScore);
+                checkedScore("hiphop", hiphopScore);
                 break;
             case "2010s":
                 avatar80.setImageResource(R.drawable.s2010_80);
-                checkedScore(s2010Score);
+                checkedScore("2010s", s2010Score);
                 break;
             case "2000s":
                 avatar80.setImageResource(R.drawable.s2000_80);
-                checkedScore(s2000Score);
+                checkedScore("2000s", s2000Score);
                 break;
             case "90s":
                 avatar80.setImageResource(R.drawable.s90_80);
-                checkedScore(s90Score);
+                checkedScore("90s", s90Score);
                 break;
             case "80s":
                 avatar80.setImageResource(R.drawable.s80_80);
-                checkedScore(s80Score);
+                checkedScore("80s", s80Score);
                 break;
         }
     }
@@ -117,52 +117,84 @@ public class end_game extends AppCompatActivity {
         switch (thisGenre) {
             case "Rock":
                 avatar50.setImageResource(R.drawable.rock50);
-                checkedScore(rockScore);
+                checkedScore("rock", rockScore);
                 break;
             case "Pop":
                 avatar50.setImageResource(R.drawable.pop50);
-                checkedScore(popScore);
+                checkedScore("pop", popScore);
                 break;
             case "Punk":
                 avatar50.setImageResource(R.drawable.punk50);
-                checkedScore(punkScore);
+                checkedScore("punk", punkScore);
                 break;
             case "Indie":
                 avatar50.setImageResource(R.drawable.indie50);
-                checkedScore(indieScore);
+                checkedScore("indie", indieScore);
                 break;
             case "Russian":
                 avatar50.setImageResource(R.drawable.russian50);
-                checkedScore(russianScore);
+                checkedScore("russian", russianScore);
                 break;
             case "Hip-Hop":
                 avatar50.setImageResource(R.drawable.hiphop50);
-                checkedScore(hiphopScore);
+                checkedScore("hiphop", hiphopScore);
                 break;
             case "2010s":
                 avatar50.setImageResource(R.drawable.s2010_50);
-                checkedScore(s2010Score);
+                checkedScore("2010s", s2010Score);
                 break;
             case "2000s":
                 avatar50.setImageResource(R.drawable.s2000_50);
-                checkedScore(s2000Score);
+                checkedScore("2000s", s2000Score);
                 break;
             case "90s":
                 avatar50.setImageResource(R.drawable.s90_50);
-                checkedScore(s90Score);
+                checkedScore("90s", s90Score);
                 break;
             case "80s":
                 avatar50.setImageResource(R.drawable.s80_50);
-                checkedScore(s80Score);
+                checkedScore("80s", s80Score);
                 break;
         }
     }
 
-    private void checkedScore(String score) {
+    private void checkedScore(String genre, String score) {
+
         if (niceScore > Integer.parseInt(score)) {
             @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString(score, lastScore);
-            editor.apply();
+            switch (genre) {
+                case "rock":
+                    editor.putString("rockScore", lastScore);
+                    break;
+                case "pop":
+                    editor.putString("popScore", lastScore);
+                    break;
+                case "punk":
+                    editor.putString("punkScore", lastScore);
+                    break;
+                case "indie":
+                    editor.putString("indieScore", lastScore);
+                    break;
+                case "russian":
+                    editor.putString("russianScore", lastScore);
+                    break;
+                case "hiphop":
+                    editor.putString("hiphopScore", lastScore);
+                    break;
+                case "2010s":
+                    editor.putString("s2010Score", lastScore);
+                    break;
+                case "2000s":
+                    editor.putString("s2000Score", lastScore);
+                    break;
+                case "90s":
+                    editor.putString("s90Score", lastScore);
+                    break;
+                case "80s":
+                    editor.putString("s80Score", lastScore);
+                    break;
+            }
+           editor.apply();
         }
     }
 

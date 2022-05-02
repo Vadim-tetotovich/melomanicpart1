@@ -77,6 +77,7 @@ public class playFragment extends Fragment {
             editor.putString("thisGenre", description);
             editor.apply();
 
+            getActivity().finish();
             Intent intent = new Intent(getActivity(),playMusic.class);
             startActivity(intent);
         };
