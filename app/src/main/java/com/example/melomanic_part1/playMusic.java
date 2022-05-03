@@ -1,7 +1,6 @@
 package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -43,7 +42,6 @@ public class playMusic extends AppCompatActivity {
     int levelCount = 0, i = 0, levelValue = 0;
     JSONObject randomObject;
     String randomTitle;
-    Dialog dialog;
     int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0;
     ProgressBar songProgressBar;
     Runnable runnable;
@@ -177,8 +175,7 @@ public class playMusic extends AppCompatActivity {
             if (textBtn.equals(correctMusicTitle)) {
                 b.setTextColor(getResources().getColor(R.color.correctly));
                 isCorrectSong = 1;
-                int currentProgress = songProgressBar.getProgress();
-                scoreValueS = scoreValueS + (int) (10 - Math.ceil(currentProgress / 1000));
+                setScoreForTheLevel();
             } else {
                 if (correctMusicTitle.equals(correctTextBtn1))
                     chooseBtn1.setTextColor(getResources().getColor(R.color.correctly));
@@ -206,53 +203,16 @@ public class playMusic extends AppCompatActivity {
         }
     };
 
-    private void open() {
-        dialog = new Dialog(playMusic.this);
-        dialog.setContentView(R.layout.dialog_design);
-        dialog.setCanceledOnTouchOutside(false);
-
-        dialogWork(dialog);
-        dialog.show();
-    }
-
-    @SuppressLint({"SetTextI18n", "ResourceAsColor"})
-    private void dialogWork(Dialog dialog) {
-       Button btnNext =  dialog.findViewById(R.id.dialogNexnBtn);
-       TextView answer = dialog.findViewById(R.id.dialogCorrectlyText);
-       TextView dialogSongTitle = dialog.findViewById(R.id.songTitle);
-        if (levelCount == 9) {
-            btnNext.setText("Home");
+    private void setScoreForTheLevel() {
+        int currentProgress = songProgressBar.getProgress();
+        if (currentProgress >= 8500) {
+            scoreValueS = scoreValueS + 5;
+        } else if (currentProgress <= 2000) {
+            scoreValueS = scoreValueS + 10;
+        } else if (currentProgress > 2000 && currentProgress < 8500) {
+            scoreValueS = scoreValueS + ((int) (10 - Math.floor(currentProgress / 1000)) + 2);
         }
 
-       if (isCorrectSong == 1) {
-           answer.setText("Correctly");
-           answer.setTextColor(getResources().getColor(R.color.correctly));
-       } else if (isCorrectSong == 0) {
-           answer.setText("Wrong");
-           answer.setTextColor(getResources().getColor(R.color.wrong));
-       } else if (isCorrectSong == 2) {
-           answer.setText("Time is over");
-           answer.setTextColor(getResources().getColor(R.color.wrong));
-       }
-
-       dialogSongTitle.setText(correctMusicTitle);
-       btnNext.setOnClickListener(view -> {
-           if (levelCount < 9) {
-               dialog.dismiss();
-               levelCount++;
-               isCorrectSong = 0;
-               musicTitles.clear();
-               chooseBtn1.setTextColor(getResources().getColor(R.color.categories_title));
-               chooseBtn2.setTextColor(getResources().getColor(R.color.categories_title));
-               chooseBtn3.setTextColor(getResources().getColor(R.color.categories_title));
-               chooseBtn4.setTextColor(getResources().getColor(R.color.categories_title));
-               playSong();
-           } else {
-               dialog.dismiss();
-               Intent intent = new Intent(this, BottomMenuLoad.class);
-               startActivity(intent);
-           }
-       });
     }
 
     public boolean checkedGuessedSongs(String correctSongTitle) {

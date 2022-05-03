@@ -42,6 +42,7 @@ public class end_game extends AppCompatActivity {
         avatarProgress.setProgress(niceScore);
 
         btnHome.setOnClickListener(view -> {
+            finish();
             Intent intent = new Intent(this, BottomMenuLoad.class);
             startActivity(intent);
         });
@@ -53,10 +54,13 @@ public class end_game extends AppCompatActivity {
         endGameScore.setText(lastScore);
 
         niceScore = Integer.parseInt(lastScore);
-        if (niceScore >= 50) {
+        if (niceScore >= 50 && niceScore < 80) {
             endGameText.setText(yesAvatar);
             setAvatar50();
-        } else if (niceScore >= 80) {
+        }
+        if (niceScore >= 80) {
+            endGameText.setText(yesAvatar);
+            setAvatar50();
             setAvatar80();
         } else {
             endGameText.setText(noAvatar);
@@ -159,7 +163,6 @@ public class end_game extends AppCompatActivity {
     }
 
     private void checkedScore(String genre, String score) {
-
         if (niceScore > Integer.parseInt(score)) {
             @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
             switch (genre) {

@@ -112,79 +112,80 @@ public class profileFragment extends Fragment {
         if (Integer.parseInt(rockScore) >= 50) {
             rock50.setEnabled(true);
             rock50.setImageResource(R.drawable.rock50);
-        } else if (Integer.parseInt(rockScore) >= 80) {
+        }
+        if (Integer.parseInt(rockScore) >= 80) {
             rock80.setEnabled(true);
             rock80.setImageResource(R.drawable.rock80);
         }
-        else if (Integer.parseInt(popScore) >= 50) {
+        if (Integer.parseInt(popScore) >= 50) {
             pop50.setEnabled(true);
             pop50.setImageResource(R.drawable.pop50);
         }
-        else if (Integer.parseInt(popScore) >= 80) {
+        if (Integer.parseInt(popScore) >= 80) {
             pop80.setEnabled(true);
             pop80.setImageResource(R.drawable.pop80);
         }
-        else if (Integer.parseInt(indieScore) >= 50) {
+        if (Integer.parseInt(indieScore) >= 50) {
             indie50.setEnabled(true);
             indie50.setImageResource(R.drawable.indie50);
         }
-        else if (Integer.parseInt(indieScore) >= 80) {
+        if (Integer.parseInt(indieScore) >= 80) {
             indie80.setEnabled(true);
             indie80.setImageResource(R.drawable.indie80);
         }
-        else if (Integer.parseInt(punkScore) >= 50) {
+        if (Integer.parseInt(punkScore) >= 50) {
             punk50.setEnabled(true);
             punk50.setImageResource(R.drawable.punk50);
         }
-        else if (Integer.parseInt(punkScore) >= 80) {
+        if (Integer.parseInt(punkScore) >= 80) {
             punk80.setEnabled(true);
             punk80.setImageResource(R.drawable.punk80);
         }
-        else if (Integer.parseInt(russianScore) >= 50) {
+        if (Integer.parseInt(russianScore) >= 50) {
             russian50.setEnabled(true);
             russian50.setImageResource(R.drawable.russian50);
         }
-        else if (Integer.parseInt(russianScore) >= 80) {
+        if (Integer.parseInt(russianScore) >= 80) {
             russian80.setEnabled(true);
             russian80.setImageResource(R.drawable.russian80);
         }
-        else if (Integer.parseInt(hiphopScore) >= 50) {
+        if (Integer.parseInt(hiphopScore) >= 50) {
             hiphop50.setEnabled(true);
             hiphop50.setImageResource(R.drawable.hiphop50);
         }
-        else if (Integer.parseInt(hiphopScore) >= 80) {
+        if (Integer.parseInt(hiphopScore) >= 80) {
             hiphop80.setEnabled(true);
             hiphop80.setImageResource(R.drawable.hiphop80);
         }
-        else if (Integer.parseInt(s2010Score) >= 50) {
+        if (Integer.parseInt(s2010Score) >= 50) {
             s2010_50.setEnabled(true);
             s2010_50.setImageResource(R.drawable.s2010_50);
         }
-        else if (Integer.parseInt(s2010Score) >= 80) {
+        if (Integer.parseInt(s2010Score) >= 80) {
             s2010_80.setEnabled(true);
             s2010_80.setImageResource(R.drawable.s2010_80);
         }
-        else if (Integer.parseInt(s2000Score) >= 50) {
+        if (Integer.parseInt(s2000Score) >= 50) {
             s2000_50.setEnabled(true);
             s2000_50.setImageResource(R.drawable.s2000_50);
         }
-        else if (Integer.parseInt(s2000Score) >= 80) {
+        if (Integer.parseInt(s2000Score) >= 80) {
             s2000_80.setEnabled(true);
             s2000_80.setImageResource(R.drawable.s2000_80);
         }
-        else if (Integer.parseInt(s90Score) >= 50) {
+        if (Integer.parseInt(s90Score) >= 50) {
             s90_50.setEnabled(true);
             s90_50.setImageResource(R.drawable.s90_50);
         }
-        else if (Integer.parseInt(s90Score) >= 80) {
+        if (Integer.parseInt(s90Score) >= 80) {
             s90_80.setEnabled(true);
             s90_80.setImageResource(R.drawable.s90_80);
         }
-        else if (Integer.parseInt(s80Score) >= 50) {
+        if (Integer.parseInt(s80Score) >= 50) {
             s80_50.setEnabled(true);
             s80_50.setImageResource(R.drawable.s80_50);
         }
-        else if (Integer.parseInt(s80Score) >= 80) {
+        if (Integer.parseInt(s80Score) >= 80) {
             s80_80.setEnabled(true);
             s80_80.setImageResource(R.drawable.s80_80);
         }
