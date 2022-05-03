@@ -1,6 +1,7 @@
 package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,7 +9,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -37,10 +40,12 @@ public class profileFragment extends Fragment {
 
     SharedPreferences sharedPreferences;
     ImageButton editGenresBtn, rock80, rock50, pop80, pop50, indie80, indie50, punk80, punk50, russian80, russian50, hiphop80, hiphop50, s2010_80,s2010_50,s2000_80, s2000_50, s90_80, s90_50, s80_80, s80_50;
-    String personName, sharedBtn1, sharedBtn2, sharedBtn3;
+    String personName, sharedBtn1, sharedBtn2, sharedBtn3, avatarImage;
     TextView nameText, genre1, genre2, genre3;
     String rockScore, popScore, punkScore, indieScore, russianScore, hiphopScore, s2010Score, s2000Score, s90Score, s80Score;
     ArrayList<ImageButton> enablesBtn = new ArrayList<>();
+    Button dialogSetBtn;
+    ImageView imageAvatar;
 
     public profileFragment() {
         // Required empty public constructor
@@ -90,6 +95,8 @@ public class profileFragment extends Fragment {
             imageButton.setEnabled(false);
         });
 
+        checkedAvatarImage();
+
         setImageBtnAvatars();
 
         nameText.setText("Hello, " + personName + "!");
@@ -97,7 +104,11 @@ public class profileFragment extends Fragment {
         genre2.setText(sharedBtn2);
         genre3.setText(sharedBtn3);
 
-
+        enablesBtn.forEach(bnt -> {
+            bnt.setOnClickListener(view -> {
+                openDialog(bnt);
+            });
+        });
 
         editGenresBtn.setOnClickListener(view -> {
             getActivity().finish();
@@ -106,6 +117,105 @@ public class profileFragment extends Fragment {
         });
 
         return viewProfile;
+    }
+
+    private void checkedAvatarImage() {
+        imageAvatar.setMaxWidth(136);
+        imageAvatar.setMaxHeight(136);
+        switch (avatarImage) {
+            case "defaultAvatarImage":
+                imageAvatar.setImageResource(R.drawable.default_avatar);
+                break;
+            case "rock80Avatar":
+                imageAvatar.setImageResource(R.drawable.rock80);
+                break;
+            case "rock50Avatar":
+                imageAvatar.setImageResource(R.drawable.rock50);
+                break;
+            case "pop80Avatar":
+                imageAvatar.setImageResource(R.drawable.pop80);
+                break;
+            case "pop50Avatar":
+                imageAvatar.setImageResource(R.drawable.pop50);
+                break;
+            case "punk80Avatar":
+                imageAvatar.setImageResource(R.drawable.punk80);
+                break;
+            case "punk50Avatar":
+                imageAvatar.setImageResource(R.drawable.punk50);
+                break;
+            case "indie80Avatar":
+                imageAvatar.setImageResource(R.drawable.indie80);
+                break;
+            case "indie50Avatar":
+                imageAvatar.setImageResource(R.drawable.indie50);
+                break;
+            case "russian80Avatar":
+                imageAvatar.setImageResource(R.drawable.russian80);
+                break;
+            case "russian50Avatar":
+                imageAvatar.setImageResource(R.drawable.russian50);
+                break;
+            case "hiphop80Avatar":
+                imageAvatar.setImageResource(R.drawable.hiphop80);
+                break;
+            case "hiphop50Avatar":
+                imageAvatar.setImageResource(R.drawable.hiphop50);
+                break;
+            case "2010s80Avatar":
+                imageAvatar.setImageResource(R.drawable.s2010_80);
+                break;
+            case "2010s50Avatar":
+                imageAvatar.setImageResource(R.drawable.s2010_50);
+                break;
+            case "2000s80Avatar":
+                imageAvatar.setImageResource(R.drawable.s2000_80);
+                break;
+            case "2000s50Avatar":
+                imageAvatar.setImageResource(R.drawable.s2000_50);
+                break;
+            case "90s80Avatar":
+                imageAvatar.setImageResource(R.drawable.s90_80);
+                break;
+            case "90s50Avatar":
+                imageAvatar.setImageResource(R.drawable.s90_50);
+                break;
+            case "80s80Avatar":
+                imageAvatar.setImageResource(R.drawable.s80_80);
+                break;
+            case "80s50Avatar":
+                imageAvatar.setImageResource(R.drawable.s80_50);
+                break;
+        }
+
+    }
+
+    private void openDialog(ImageButton b) {
+        Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.custom_dialog_for_set_avatar);
+        dialog.setCanceledOnTouchOutside(false);
+        dialogWork(dialog, b);
+        dialog.show();
+    }
+
+    private void dialogWork(Dialog dialog, ImageButton b) {
+        dialogSetBtn = dialog.findViewById(R.id.dialogSetBtn);
+        String bntDescription = (String) b.getContentDescription();
+
+        setAvatar(bntDescription);
+
+        dialogSetBtn.setOnClickListener(view -> {
+            avatarImage = sharedPreferences.getString("avatarImage", "unknown");
+            checkedAvatarImage();
+            dialog.dismiss();
+        });
+
+    }
+
+    private void setAvatar(String description) {
+        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("avatarImage", description);
+        editor.apply();
     }
 
     private void setImageBtnAvatars() {
@@ -220,6 +330,8 @@ public class profileFragment extends Fragment {
         sharedBtn2 = sharedPreferences.getString("button2", "unknown");
         sharedBtn3 = sharedPreferences.getString("button3", "unknown");
 
+        avatarImage = sharedPreferences.getString("avatarImage", "unknown");
+
         rockScore = sharedPreferences.getString("rockScore", "");
         popScore = sharedPreferences.getString("popScore", "");
         punkScore = sharedPreferences.getString("punkScore", "");
@@ -238,6 +350,8 @@ public class profileFragment extends Fragment {
         genre2 = this.viewProfile.findViewById(R.id.genres2);
         genre3 = this.viewProfile.findViewById(R.id.genres3);
         editGenresBtn = this.viewProfile.findViewById(R.id.edit_genres);
+
+        imageAvatar = this.viewProfile.findViewById(R.id.avatarImage);
 
         rock50 = this.viewProfile.findViewById(R.id.rock_50);
         rock80= this.viewProfile.findViewById(R.id.rock_80);

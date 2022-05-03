@@ -40,6 +40,7 @@ public class Loading extends AppCompatActivity {
                 editor.putString("s2000Score", "0");
                 editor.putString("s90Score", "0");
                 editor.putString("s80Score", "0");
+                editor.putString("avatarImage", "defaultAvatarImage");
                 editor.apply();
                 startActivity(new Intent(Loading.this, MainActivity.class));
             }
