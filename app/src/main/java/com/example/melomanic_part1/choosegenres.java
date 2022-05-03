@@ -16,11 +16,9 @@ import java.util.ArrayList;
 
 public class choosegenres extends AppCompatActivity {
 
-//    private final static String FILE_NAME = "content.txt";
     public static final String APP_PREFERENCES = "FilePreferences";
 
     TextView textView;
-    public SharedPreferences mSettings;
 
     Button rockBtn, popBtn, indieBtn, punkBtn, russianBtn, hiphopBtn, btn2000s, btn2010s, btn90s, btn80s, letsGoBtn;
     ArrayList<Button> selectedButtons = new ArrayList<>();
@@ -37,7 +35,6 @@ public class choosegenres extends AppCompatActivity {
         String perName = sharedPref.getString("NAME", "unknown");
 
         textView.setText("Hi, " + perName + "!");
-
 
         OnClickListener onClickListener = view -> {
             Button button = (Button)view;

@@ -136,7 +136,5 @@ public class mainMenuFragment extends Fragment {
                 button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
                 break;
         }
-
     }
-
 }

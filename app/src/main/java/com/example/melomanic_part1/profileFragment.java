@@ -1,7 +1,6 @@
 package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,7 +37,6 @@ public class profileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View viewProfile;
-    private View viewForBtn;
     Snackbar snackbar;
 
     SharedPreferences sharedPreferences;
@@ -48,7 +45,6 @@ public class profileFragment extends Fragment {
     TextView nameText, genre1, genre2, genre3;
     String rockScore, popScore, punkScore, indieScore, russianScore, hiphopScore, s2010Score, s2000Score, s90Score, s80Score;
     ArrayList<ImageButton> enablesBtn = new ArrayList<>();
-    Button dialogSetBtn;
     ImageView imageAvatar;
 
     public profileFragment() {
@@ -110,7 +106,6 @@ public class profileFragment extends Fragment {
 
         enablesBtn.forEach(bnt -> {
             bnt.setOnClickListener(view -> {
-//                openDialog(bnt);
                 snackbar = Snackbar.make(view, "Set as avatar?", Snackbar.LENGTH_LONG)
                         .setBackgroundTint(getResources().getColor(R.color.black))
                         .setActionTextColor(getResources().getColor(R.color.choose_btn_backcolor_default))
@@ -132,7 +127,6 @@ public class profileFragment extends Fragment {
 
         return viewProfile;
     }
-
 
     private void checkedAvatarImage() {
         imageAvatar.setMaxWidth(136);
@@ -202,7 +196,6 @@ public class profileFragment extends Fragment {
                 imageAvatar.setImageResource(R.drawable.s80_50);
                 break;
         }
-
     }
 
     private void workSnackBar(ImageButton btn) {
@@ -210,28 +203,6 @@ public class profileFragment extends Fragment {
         setAvatar(bntDescription);
         avatarImage = sharedPreferences.getString("avatarImage", "unknown");
         checkedAvatarImage();
-    }
-
-    private void openDialog(ImageButton b) {
-//        Dialog dialog = new Dialog(getActivity());
-//        dialog.setContentView(R.layout.custom_dialog_for_set_avatar);
-//        dialog.setCanceledOnTouchOutside(false);
-//          dialogWork(dialog, b);
-//        dialog.show();
-    }
-
-    private void dialogWork(Dialog dialog, ImageButton b) {
-        dialogSetBtn = dialog.findViewById(R.id.dialogSetBtn);
-        String bntDescription = (String) b.getContentDescription();
-
-        setAvatar(bntDescription);
-
-        dialogSetBtn.setOnClickListener(view -> {
-            avatarImage = sharedPreferences.getString("avatarImage", "unknown");
-            checkedAvatarImage();
-            dialog.dismiss();
-        });
-
     }
 
     private void setAvatar(String description) {

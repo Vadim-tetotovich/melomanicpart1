@@ -22,7 +22,6 @@ public class Loading extends AppCompatActivity {
 
         sharedPref = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
-
         isOpenApp = sharedPref.getBoolean("openApp", false);
 
         new Handler().postDelayed(() -> {

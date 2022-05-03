@@ -26,8 +26,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class playMusic extends AppCompatActivity {
 
@@ -45,12 +43,9 @@ public class playMusic extends AppCompatActivity {
     int levelCount = 0, i = 0, levelValue = 0;
     JSONObject randomObject;
     String randomTitle;
-    int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0, counter = 0;
+    int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0;
     ProgressBar songProgressBar;
-    Runnable runnable;
     Handler handlerProgress;
-    Timer t;
-    TimerTask tt;
 
     ArrayList<String> guessedSongs = new ArrayList<>();
     ArrayList<String> musicTitles = new ArrayList<>();
@@ -81,14 +76,12 @@ public class playMusic extends AppCompatActivity {
         handlerProgress = new Handler();
 
         playSong();
-
     }
 
     public void playSong() {
         @SuppressLint({"SetTextI18n", "ResourceType"}) JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 response -> {
                     try {
-
                         if (handlerRunProgress != 0) {
                             Thread.sleep(1000);
                         }
@@ -97,7 +90,6 @@ public class playMusic extends AppCompatActivity {
                         chooseBtn2.setTextColor(getResources().getColor(R.color.categories_title));
                         chooseBtn3.setTextColor(getResources().getColor(R.color.categories_title));
                         chooseBtn4.setTextColor(getResources().getColor(R.color.categories_title));
-
 
                         level.setText((levelCount + 1) + " / 10");
                         String sc = "" + scoreValueS;
@@ -126,19 +118,6 @@ public class playMusic extends AppCompatActivity {
 
                         mPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(src, "raw", getPackageName()));
 
-//                        if (handlerRunProgress < 1) {
-//                            runnable = new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    songProgressBar.setMax(mPlayer.getDuration());
-//                                    handlerProgress.postDelayed(runnable, 0);
-//                                    songProgressBar.setProgress(mPlayer.getCurrentPosition());
-//                                    handlerProgress.postDelayed(this, 100);
-//                                }
-//                            };
-//                        }
-//                        handlerRunProgress++;
-
                         progressBarSong();
 
                         chooseBtn1.setOnClickListener(onClickListener);
@@ -163,18 +142,6 @@ public class playMusic extends AppCompatActivity {
         ObjectAnimator.ofInt(songProgressBar, "progress", 100)
                 .setDuration(10000)
                 .start();
-
-
-//        songProgressBar.setMax(mPlayer.getDuration());
-//        handlerProgress.postDelayed(runnable, 0);
-//
-//        runnable = new Runnable() {
-//            @Override
-//            public void run() {
-//                songProgressBar.setProgress(mPlayer.getCurrentPosition());
-//                handlerProgress.postDelayed(this, 100);
-//            }
-//        };
     }
 
     Button.OnClickListener onClickListener = view -> {
@@ -226,7 +193,6 @@ public class playMusic extends AppCompatActivity {
         } else if (currentProgress > 2000 && currentProgress < 8500) {
             scoreValueS = scoreValueS + ((int) (10 - Math.floor(currentProgress / 1000)) + 2);
         }
-
     }
 
     public boolean checkedGuessedSongs(String correctSongTitle) {

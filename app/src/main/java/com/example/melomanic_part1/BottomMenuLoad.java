@@ -23,7 +23,6 @@ public class BottomMenuLoad extends AppCompatActivity implements BottomNavigatio
 
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.page_1);
-
     }
 
     mainMenuFragment mainMenuFragment = new mainMenuFragment();

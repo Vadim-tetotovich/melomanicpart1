@@ -105,7 +105,6 @@ public class playFragment extends Fragment {
         btn80s = this.playView.findViewById(R.id.s80PlayBtn);
         btn80s.setOnClickListener(onClickListener);
 
-
         return playView;
     }
 }

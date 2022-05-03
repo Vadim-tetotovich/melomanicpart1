@@ -212,8 +212,6 @@ public class end_game extends AppCompatActivity {
         thisGenre = sharedPreferences.getString("thisGenre", "unknown");
         lastScore = sharedPreferences.getString("EndScore", "unknown");
 
-
-
         rockScore = sharedPreferences.getString("rockScore", "");
         popScore = sharedPreferences.getString("popScore", "");
         punkScore = sharedPreferences.getString("punkScore", "");
