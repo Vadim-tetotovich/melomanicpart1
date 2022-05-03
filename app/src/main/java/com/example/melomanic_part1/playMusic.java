@@ -29,7 +29,7 @@ import java.util.Random;
 public class playMusic extends AppCompatActivity {
 
     public static final String APP_PREFERENCES = "FilePreferences";
-    String url = "https://api.jsonbin.io/b/626d79c025069545a32b468d/5";
+    String url = "https://api.jsonbin.io/b/626d79c025069545a32b468d/6";
 
     SharedPreferences sharedPreferences;
     RequestQueue mQueue;

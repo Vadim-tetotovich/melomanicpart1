@@ -82,7 +82,7 @@
         "src": "like_a_stone"
       },
       {
-        "musicName": "Live forever",
+        "musicName": "Live Forever",
         "src": "live_forever"
       },
       {
@@ -210,12 +210,176 @@
   "Indie": {
     "music": [
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "All I Want",
+        "src": "all_i_want"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Alright",
+        "src": "alright"
+      },
+      {
+        "musicName": "Alrighty Aphrodite",
+        "src": "alrighty_aphrodite"
+      },
+      {
+        "musicName": "Are You Bored Yet",
+        "src": "are_you_bored_yet"
+      },
+      {
+        "musicName": "Atlantis",
+        "src": "atlantis"
+      },
+      {
+        "musicName": "Bad Idea",
+        "src": "bad_idea"
+      },
+      {
+        "musicName": "Bellyache",
+        "src": "bellyache"
+      },
+      {
+        "musicName": "Brazil",
+        "src": "brazil"
+      },
+      {
+        "musicName": "Call Me By Your Name",
+        "src": "call_me_by_your_name"
+      },
+      {
+        "musicName": "Call I Call You Tonight",
+        "src": "can_i_call_you_tonight"
+      },
+      {
+        "musicName": "Cornerstone",
+        "src": "cornerstone"
+      },
+      {
+        "musicName": "Daddy Issues",
+        "src": "daddy_issues"
+      },
+      {
+        "musicName": "Everybody's Changing",
+        "src": "everybodys_changing"
+      },
+      {
+        "musicName": "Feel Good Inc",
+        "src": "feel_goold_inc"
+      },
+      {
+        "musicName": "Garden Song",
+        "src": "garden_song"
+      },
+      {
+        "musicName": "Happier Than Ever",
+        "src": "happier_than_ever"
+      },
+      {
+        "musicName": "Heat Waves",
+        "src": "heat_waves"
+      },
+      {
+        "musicName": "Ho Hey",
+        "src": "ho_hey"
+      },
+      {
+        "musicName": "I Need My Girl",
+        "src": "i_need_my_girl"
+      },
+      {
+        "musicName": "In The Airplane Over The Sea",
+        "src": "in_the_airplane_over_the_sea"
+      },
+      {
+        "musicName": "July",
+        "src": "july"
+      },
+      {
+        "musicName": "Little Dark Age",
+        "src": "little_dark_age"
+      },
+      {
+        "musicName": "Mountain at My Gates",
+        "src": "mountain_at_my_gates"
+      },
+      {
+        "musicName": "Notion",
+        "src": "notion"
+      },
+      {
+        "musicName": "Pumped Up Kicks",
+        "src": "pumped_up_kicks"
+      },
+      {
+        "musicName": "Riptide",
+        "src": "riptide"
+      },
+      {
+        "musicName": "Rue",
+        "src": "rue"
+      },
+      {
+        "musicName": "Scrawny",
+        "src": "scrawny"
+      },
+      {
+        "musicName": "Serotonin",
+        "src": "serotonin"
+      },
+      {
+        "musicName": "Snake It Out",
+        "src": "shake_it_out"
+      },
+      {
+        "musicName": "Shampoo Bottles",
+        "src": "shampoo_bottles"
+      },
+      {
+        "musicName": "Shy Away",
+        "src": "shy_away"
+      },
+      {
+        "musicName": "Skinny Love",
+        "src": "skinny_love"
+      },
+      {
+        "musicName": "Solar Power",
+        "src": "solar_power"
+      },
+      {
+        "musicName": "Someday",
+        "src": "someday"
+      },
+      {
+        "musicName": "Stop Making This Hurt",
+        "src": "stop_making_this_hurt"
+      },
+      {
+        "musicName": "The Adults Are Talking",
+        "src": "the_adults_are_talking"
+      },
+      {
+        "musicName": "The Less I Know The Better",
+        "src": "the_less_i_know_the_better"
+      },
+      {
+        "musicName": "The Suburbs",
+        "src": "the_suburbs"
+      },
+      {
+        "musicName": "Time For Heroes",
+        "src": "time_for_heroes"
+      },
+      {
+        "musicName": "Tongue_tied",
+        "src": "tongue_tied"
+      },
+      {
+        "musicName": "Trouble",
+        "src": "trouble"
+      },
+      {
+        "musicName": "What Katie Did",
+        "src": "what_katie_did"
       }
     ]
   },
