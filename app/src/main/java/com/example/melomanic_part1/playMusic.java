@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -46,6 +47,7 @@ public class playMusic extends AppCompatActivity {
     int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0;
     ProgressBar songProgressBar;
     Handler handlerProgress;
+    ImageView sticker183, sticker200;
 
     ArrayList<String> guessedSongs = new ArrayList<>();
     ArrayList<String> musicTitles = new ArrayList<>();
@@ -69,6 +71,8 @@ public class playMusic extends AppCompatActivity {
         level = findViewById(R.id.levelCount);
         score = findViewById(R.id.scoreValue);
         songProgressBar = findViewById(R.id.progressBarForSong);
+        sticker183 = findViewById(R.id.transparent183);
+        sticker200 = findViewById(R.id.transparent200);
 
         title.setText(titleGenre);
 
@@ -83,8 +87,11 @@ public class playMusic extends AppCompatActivity {
                 response -> {
                     try {
                         if (handlerRunProgress != 0) {
-                            Thread.sleep(1000);
+                            Thread.sleep(2500);
                         }
+
+                        sticker200.setImageResource(R.drawable.transparent200);
+                        sticker183.setImageResource(R.drawable.transparent183);
 
                         chooseBtn1.setTextColor(getResources().getColor(R.color.categories_title));
                         chooseBtn2.setTextColor(getResources().getColor(R.color.categories_title));
@@ -154,6 +161,7 @@ public class playMusic extends AppCompatActivity {
             String correctTextBtn4 = chooseBtn4.getText().toString();
 
             if (textBtn.equals(correctMusicTitle)) {
+                setSticker();
                 b.setTextColor(getResources().getColor(R.color.correctly));
                 isCorrectSong = 1;
                 setScoreForTheLevel();
@@ -183,6 +191,24 @@ public class playMusic extends AppCompatActivity {
             startActivity(intent);
         }
     };
+
+    private void setSticker() {
+        Random stickerRandom = new Random();
+        int stickRand = stickerRandom.nextInt(2);
+        if (stickRand == 1) {
+            Random placeRandom = new Random();
+            int place = placeRandom.nextInt(2);
+            if (place == 1) {
+                sticker200.setMaxWidth(200);
+                sticker200.setMaxHeight(200);
+                sticker200.setImageResource(R.drawable.sticker2);
+            } else {
+                sticker183.setMaxWidth(183);
+                sticker183.setMaxHeight(183);
+                sticker183.setImageResource(R.drawable.sticker1);
+            }
+        }
+    }
 
     private void setScoreForTheLevel() {
         int currentProgress = mPlayer.getCurrentPosition();
