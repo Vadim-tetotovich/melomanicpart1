@@ -2,6 +2,7 @@ package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -29,6 +30,10 @@ public class mainMenuFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View view;
+    SharedPreferences sharedPreferences;
+    Button button1, button2, button3;
+    int imgRes;
+    String sharedBtn1, sharedBtn2, sharedBtn3;
 
     public mainMenuFragment() {
         // Required empty public constructor
@@ -65,27 +70,73 @@ public class mainMenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
         view = inflater.inflate(R.layout.fragment_main_menu, container, false);
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
-        String sharedBtn1 = sharedPreferences.getString("button1", "unknown");
-        String sharedBtn2 = sharedPreferences.getString("button2", "unknown");
-        String sharedBtn3 = sharedPreferences.getString("button3", "unknown");
+
+        sharedPreferences = this.getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        sharedBtn1 = sharedPreferences.getString("button1", "unknown");
+        sharedBtn2 = sharedPreferences.getString("button2", "unknown");
+        sharedBtn3 = sharedPreferences.getString("button3", "unknown");
 
         this.view = inflater.inflate(R.layout.fragment_main_menu, container, false);
-        Button button1 = this.view.findViewById(R.id.main_display_btn1);
-        Button button2 = this.view.findViewById(R.id.main_display_btn2);
-        Button button3 = this.view.findViewById(R.id.main_display_btn3);
+        button1 = this.view.findViewById(R.id.main_display_btn1);
+        button2 = this.view.findViewById(R.id.main_display_btn2);
+        button3 = this.view.findViewById(R.id.main_display_btn3);
 
-        int imgRes = R.drawable.rockicon;
-        button1.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+        button1.setOnClickListener(onClickListener);
+        button2.setOnClickListener(onClickListener);
+        button3.setOnClickListener(onClickListener);
+
+        setIconForBtn(sharedBtn1, button1);
+        setIconForBtn(sharedBtn2, button2);
+        setIconForBtn(sharedBtn3, button3);
 
         button1.setText(sharedBtn1);
         button2.setText(sharedBtn2);
         button3.setText(sharedBtn3);
 
         return view;
+    }
+
+    Button.OnClickListener onClickListener = view -> {
+        Button b = (Button) view;
+        String text = (String) b.getText();
+        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("thisGenre", text);
+        editor.apply();
+
+        getActivity().finish();
+        Intent intent = new Intent(getActivity(),playMusic.class);
+        startActivity(intent);
+    };
+
+    private void setIconForBtn(String sharedBtn, Button button) {
+        switch (sharedBtn) {
+            case "Rock":
+                imgRes = R.drawable.rockicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+            case "Pop":
+                imgRes = R.drawable.popicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+            case "Punk":
+                imgRes = R.drawable.punkicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+            case "Indie":
+                imgRes = R.drawable.indieicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+            case "Russian":
+                imgRes = R.drawable.russianicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+            case "Hip-Hop":
+                imgRes = R.drawable.hiphopicon;
+                button.setCompoundDrawablesRelativeWithIntrinsicBounds(imgRes,0,0,0);
+                break;
+        }
+
     }
 
 }

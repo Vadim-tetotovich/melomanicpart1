@@ -21,9 +21,6 @@
             android:name=".editGenres"
             android:exported="false" />
         <activity
-            android:name=".choose_categories_for_game"
-            android:exported="false" />
-        <activity
             android:name=".BottomMenuLoad"
             android:exported="false" />
         <activity
