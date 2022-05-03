@@ -1,5 +1,6 @@
 package com.example.melomanic_part1;
 
+import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +26,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class playMusic extends AppCompatActivity {
 
@@ -42,10 +45,12 @@ public class playMusic extends AppCompatActivity {
     int levelCount = 0, i = 0, levelValue = 0;
     JSONObject randomObject;
     String randomTitle;
-    int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0;
+    int isCorrectSong = 0, scoreValueS = 0, handlerRunProgress = 0, counter = 0;
     ProgressBar songProgressBar;
     Runnable runnable;
     Handler handlerProgress;
+    Timer t;
+    TimerTask tt;
 
     ArrayList<String> guessedSongs = new ArrayList<>();
     ArrayList<String> musicTitles = new ArrayList<>();
@@ -121,18 +126,18 @@ public class playMusic extends AppCompatActivity {
 
                         mPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(src, "raw", getPackageName()));
 
-                        if (handlerRunProgress < 1) {
-                            runnable = new Runnable() {
-                                @Override
-                                public void run() {
-                                    songProgressBar.setMax(mPlayer.getDuration());
-                                    handlerProgress.postDelayed(runnable, 0);
-                                    songProgressBar.setProgress(mPlayer.getCurrentPosition());
-                                    handlerProgress.postDelayed(this, 100);
-                                }
-                            };
-                        }
-                        handlerRunProgress++;
+//                        if (handlerRunProgress < 1) {
+//                            runnable = new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    songProgressBar.setMax(mPlayer.getDuration());
+//                                    handlerProgress.postDelayed(runnable, 0);
+//                                    songProgressBar.setProgress(mPlayer.getCurrentPosition());
+//                                    handlerProgress.postDelayed(this, 100);
+//                                }
+//                            };
+//                        }
+//                        handlerRunProgress++;
 
                         progressBarSong();
 
@@ -151,20 +156,29 @@ public class playMusic extends AppCompatActivity {
 
     private void progressBarSong() {
         mPlayer.start();
-        songProgressBar.setMax(mPlayer.getDuration());
-        handlerProgress.postDelayed(runnable, 0);
 
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                songProgressBar.setProgress(mPlayer.getCurrentPosition());
-                handlerProgress.postDelayed(this, 100);
-            }
-        };
+        songProgressBar.setMax(100);
+        songProgressBar.setProgress(0);
+
+        ObjectAnimator.ofInt(songProgressBar, "progress", 100)
+                .setDuration(10000)
+                .start();
+
+
+//        songProgressBar.setMax(mPlayer.getDuration());
+//        handlerProgress.postDelayed(runnable, 0);
+//
+//        runnable = new Runnable() {
+//            @Override
+//            public void run() {
+//                songProgressBar.setProgress(mPlayer.getCurrentPosition());
+//                handlerProgress.postDelayed(this, 100);
+//            }
+//        };
     }
 
     Button.OnClickListener onClickListener = view -> {
-            Button b = (Button) view;
+        Button b = (Button) view;
             String textBtn = b.getText().toString();
 
             String correctTextBtn1 = chooseBtn1.getText().toString();
@@ -204,7 +218,7 @@ public class playMusic extends AppCompatActivity {
     };
 
     private void setScoreForTheLevel() {
-        int currentProgress = songProgressBar.getProgress();
+        int currentProgress = mPlayer.getCurrentPosition();
         if (currentProgress >= 8500) {
             scoreValueS = scoreValueS + 5;
         } else if (currentProgress <= 2000) {
