@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.ArrayList;
 
 /**
@@ -37,6 +40,7 @@ public class profileFragment extends Fragment {
     private String mParam2;
     private View viewProfile;
     private View viewForBtn;
+    Snackbar snackbar;
 
     SharedPreferences sharedPreferences;
     ImageButton editGenresBtn, rock80, rock50, pop80, pop50, indie80, indie50, punk80, punk50, russian80, russian50, hiphop80, hiphop50, s2010_80,s2010_50,s2000_80, s2000_50, s90_80, s90_50, s80_80, s80_50;
@@ -106,7 +110,17 @@ public class profileFragment extends Fragment {
 
         enablesBtn.forEach(bnt -> {
             bnt.setOnClickListener(view -> {
-                openDialog(bnt);
+//                openDialog(bnt);
+                snackbar = Snackbar.make(view, "Set as avatar?", Snackbar.LENGTH_LONG)
+                        .setBackgroundTint(getResources().getColor(R.color.black))
+                        .setActionTextColor(getResources().getColor(R.color.choose_btn_backcolor_default))
+                        .setDuration(5000)
+                        .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE);
+                snackbar.show();
+                snackbar.setAction("SET", view1 -> {
+                    workSnackBar((ImageButton) view);
+                    snackbar.dismiss();
+                });
             });
         });
 
@@ -118,6 +132,7 @@ public class profileFragment extends Fragment {
 
         return viewProfile;
     }
+
 
     private void checkedAvatarImage() {
         imageAvatar.setMaxWidth(136);
@@ -190,12 +205,19 @@ public class profileFragment extends Fragment {
 
     }
 
+    private void workSnackBar(ImageButton btn) {
+        String bntDescription = (String) btn.getContentDescription();
+        setAvatar(bntDescription);
+        avatarImage = sharedPreferences.getString("avatarImage", "unknown");
+        checkedAvatarImage();
+    }
+
     private void openDialog(ImageButton b) {
-        Dialog dialog = new Dialog(getActivity());
-        dialog.setContentView(R.layout.custom_dialog_for_set_avatar);
-        dialog.setCanceledOnTouchOutside(false);
-        dialogWork(dialog, b);
-        dialog.show();
+//        Dialog dialog = new Dialog(getActivity());
+//        dialog.setContentView(R.layout.custom_dialog_for_set_avatar);
+//        dialog.setCanceledOnTouchOutside(false);
+//          dialogWork(dialog, b);
+//        dialog.show();
     }
 
     private void dialogWork(Dialog dialog, ImageButton b) {
