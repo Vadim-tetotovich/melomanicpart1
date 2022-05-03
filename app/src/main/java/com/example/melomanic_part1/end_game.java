@@ -62,7 +62,8 @@ public class end_game extends AppCompatActivity {
             endGameText.setText(yesAvatar);
             setAvatar50();
             setAvatar80();
-        } else {
+        }
+        if (niceScore < 50) {
             endGameText.setText(noAvatar);
         }
 
