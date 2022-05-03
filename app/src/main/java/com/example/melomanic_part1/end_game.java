@@ -41,6 +41,12 @@ public class end_game extends AppCompatActivity {
         avatarProgress.setMax(100);
         avatarProgress.setProgress(niceScore);
 
+        btnRestart.setOnClickListener(view -> {
+            finish();
+            Intent intent = new Intent(this, playMusic.class);
+            startActivity(intent);
+        });
+
         btnHome.setOnClickListener(view -> {
             finish();
             Intent intent = new Intent(this, BottomMenuLoad.class);
