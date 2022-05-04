@@ -50,6 +50,7 @@
             android:id="@+id/textInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:maxLength="15"
             android:textColorHint="#757575"
             tools:ignore="TextContrastCheck" />

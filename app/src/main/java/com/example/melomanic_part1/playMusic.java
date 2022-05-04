@@ -31,7 +31,7 @@ import java.util.Random;
 public class playMusic extends AppCompatActivity {
 
     public static final String APP_PREFERENCES = "FilePreferences";
-    String url = "https://api.jsonbin.io/b/626d79c025069545a32b468d/7";
+    String url = "https://api.jsonbin.io/b/626d79c025069545a32b468d/8";
 
     SharedPreferences sharedPreferences;
     RequestQueue mQueue;
@@ -87,11 +87,11 @@ public class playMusic extends AppCompatActivity {
                 response -> {
                     try {
                         if (handlerRunProgress != 0) {
-                            Thread.sleep(2500);
+                            Thread.sleep(1000);
                         }
 
-                        sticker200.setImageResource(R.drawable.transparent200);
-                        sticker183.setImageResource(R.drawable.transparent183);
+//                        sticker200.setImageResource(R.drawable.transparent200);
+//                        sticker183.setImageResource(R.drawable.transparent183);
 
                         chooseBtn1.setTextColor(getResources().getColor(R.color.categories_title));
                         chooseBtn2.setTextColor(getResources().getColor(R.color.categories_title));
@@ -161,7 +161,7 @@ public class playMusic extends AppCompatActivity {
             String correctTextBtn4 = chooseBtn4.getText().toString();
 
             if (textBtn.equals(correctMusicTitle)) {
-                setSticker();
+//                setSticker();
                 b.setTextColor(getResources().getColor(R.color.correctly));
                 isCorrectSong = 1;
                 setScoreForTheLevel();

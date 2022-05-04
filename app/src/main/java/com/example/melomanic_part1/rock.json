@@ -376,12 +376,164 @@
   "Punk": {
     "music": [
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "A Forest",
+        "src": "a_forest"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "American Idiot",
+        "src": "american_idiot"
+      },
+      {
+        "musicName": "American Jesus",
+        "src": "american_jesus"
+      },
+      {
+        "musicName": "Basket Case",
+        "src": "basket_case"
+      },
+      {
+        "musicName": "Blitzkrieg Bop",
+        "src": "blitzkrieg_bop"
+      },
+      {
+        "musicName": "Bloody Valentine",
+        "src": "bloody_valentine"
+      },
+      {
+        "musicName": "Blue Monday",
+        "src": "blue_monday"
+      },
+      {
+        "musicName": "Boys Don't Cry",
+        "src": "boys_dont_cry"
+      },
+      {
+        "musicName": "Complicated",
+        "src": "complicated"
+      },
+      {
+        "musicName": "Dammit",
+        "src": "dammit"
+      },
+      {
+        "musicName": "Dear Maria, Count Me In",
+        "src": "dear_maria_count_me_in"
+      },
+      {
+        "musicName": "Death of a Bachelor",
+        "src": "death_of_a_bachelor"
+      },
+      {
+        "musicName": "Disorder",
+        "src": "disorder"
+      },
+      {
+        "musicName": "Eighties",
+        "src": "eighties"
+      },
+      {
+        "musicName": "Ever Fallen In Love",
+        "src": "ever_fallen_in_love"
+      },
+      {
+        "musicName": "God Save The Queen",
+        "src": "god_save_the_queen"
+      },
+      {
+        "musicName": "I Miss You",
+        "src": "i_miss_you"
+      },
+      {
+        "musicName": "I Wanna Be Sedated",
+        "src": "i_wanna_be_sedated"
+      },
+      {
+        "musicName": "I Wanna Be Your Dog",
+        "src": "i_wanna_be_your_dog"
+      },
+      {
+        "musicName": "Im Just a Kid",
+        "src": "im_just_a_kid"
+      },
+      {
+        "musicName": "Im Not Okay",
+        "src": "im_not_okay"
+      },
+      {
+        "musicName": "I Write Sins Not Tragedies",
+        "src": "i_write_sins_not_tragedies"
+      },
+      {
+        "musicName": "London Calling",
+        "src": "london_calling"
+      },
+      {
+        "musicName": "Love Will Tear Us Apart",
+        "src": "love_will_tear_us_apart"
+      },
+      {
+        "musicName": "Misery Business",
+        "src": "misery_business"
+      },
+      {
+        "musicName": "Personality Crisis",
+        "src": "personality_crisis"
+      },
+      {
+        "musicName": "Pretty Fly",
+        "src": "pretty_fly"
+      },
+      {
+        "musicName": "Pretty In Pink",
+        "src": "pretty_in_pink"
+      },
+      {
+        "musicName": "Scars",
+        "src": "scars"
+      },
+      {
+        "musicName": "Scotty Doesn't Know",
+        "src": "scotty_doesnt_know"
+      },
+      {
+        "musicName": "Sk8ter Boi",
+        "src": "sk8ter_boi"
+      },
+      {
+        "musicName": "Still Waiting",
+        "src": "still_waiting"
+      },
+      {
+        "musicName": "Tainted Love",
+        "src": "tainted_love"
+      },
+      {
+        "musicName": "Teenagers",
+        "src": "teenagers"
+      },
+      {
+        "musicName": "The Adventure",
+        "src": "the_adventure"
+      },
+      {
+        "musicName": "The Passenger",
+        "src": "the_passenger"
+      },
+      {
+        "musicName": "The Phoenix",
+        "src": "the_phoenix"
+      },
+      {
+        "musicName": "Thnks fr th Mmrs",
+        "src": "thnks_fr_th_mmrs"
+      },
+      {
+        "musicName": "Whats My Age Again",
+        "src": "whats_my_age_again"
+      },
+      {
+        "musicName": "With Me",
+        "src": "with_me"
       }
     ]
   },
