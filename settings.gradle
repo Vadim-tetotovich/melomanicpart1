@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "melomanic-part1"
+rootProject.name = "Melomaniac"
 include ':app'

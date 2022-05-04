@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">melomanic-part1</string>
+    <string name="app_name">Melomaniac</string>
     <string name="greeting">Hello music lover!</string>
     <string name="acquaintance">Let\'s get acquainted</string>
     <string name="accept">I accept that songs may contain\nexplicit language</string>
