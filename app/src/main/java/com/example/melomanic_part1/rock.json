@@ -731,12 +731,164 @@
   "Hip-Hop": {
     "music": [
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "All For Us",
+        "src": "all_for_us"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "All My Friends",
+        "src": "all_my_friends"
+      },
+      {
+        "musicName": "Astronaut In The Ocean",
+        "src": "astronaut_in_the_ocean"
+      },
+      {
+        "musicName": "Candy Shop",
+        "src": "candy_shop"
+      },
+      {
+        "musicName": "Chanel",
+        "src": "chanel"
+      },
+      {
+        "musicName": "Circles",
+        "src": "circles"
+      },
+      {
+        "musicName": "Earfquake",
+        "src": "earfquake"
+      },
+      {
+        "musicName": "Freestyler",
+        "src": "freestyler"
+      },
+      {
+        "musicName": "Gangsta's Paradise",
+        "src": "gangstas_paradise"
+      },
+      {
+        "musicName": "Gods Plan",
+        "src": "gods_plan"
+      },
+      {
+        "musicName": "Good News",
+        "src": "good_news"
+      },
+      {
+        "musicName": "Humble",
+        "src": "humble"
+      },
+      {
+        "musicName": "In Da Club",
+        "src": "in_da_club"
+      },
+      {
+        "musicName": "In My Room",
+        "src": "in_my_room"
+      },
+      {
+        "musicName": "Kiss Me More",
+        "src": "kiss_me_more"
+      },
+      {
+        "musicName": "Look At Me",
+        "src": "look_at_me"
+      },
+      {
+        "musicName": "Lose Yourself",
+        "src": "lose_yourself"
+      },
+      {
+        "musicName": "3 Nights",
+        "src": "m3_nights"
+      },
+      {
+        "musicName": "Motley Crew",
+        "src": "motley_crew"
+      },
+      {
+        "musicName": "Mount Everest",
+        "src": "mount_everest"
+      },
+      {
+        "musicName": "New Magic Wand",
+        "src": "new_magic_wand"
+      },
+      {
+        "musicName": "Old Town Road",
+        "src": "old_town_road"
+      },
+      {
+        "musicName": "On The Floor",
+        "src": "on_the_floor"
+      },
+      {
+        "musicName": "One Dance",
+        "src": "one_dance"
+      },
+      {
+        "musicName": "Pink White",
+        "src": "pink_white"
+      },
+      {
+        "musicName": "Praise God",
+        "src": "praise_god"
+      },
+      {
+        "musicName": "Real Ties",
+        "src": "real_ties"
+      },
+      {
+        "musicName": "Redbone",
+        "src": "redbone"
+      },
+      {
+        "musicName": "Rockstar",
+        "src": "rockstar"
+      },
+      {
+        "musicName": "Runaway",
+        "src": "runaway"
+      },
+      {
+        "musicName": "Say So",
+        "src": "say_so"
+      },
+      {
+        "musicName": "Self Care",
+        "src": "self_care"
+      },
+      {
+        "musicName": "Sundress",
+        "src": "sundress"
+      },
+      {
+        "musicName": "Team",
+        "src": "team"
+      },
+      {
+        "musicName": "Tequila Shots",
+        "src": "tequila_shots"
+      },
+      {
+        "musicName": "The Real Slim Shady",
+        "src": "the_real_slim_shady"
+      },
+      {
+        "musicName": "The Spins",
+        "src": "the_spins"
+      },
+      {
+        "musicName": "Without Me",
+        "src": "without_me"
+      },
+      {
+        "musicName": "Woman",
+        "src": "woman"
+      },
+      {
+        "musicName": "Work",
+        "src": "work"
       }
     ]
   },
