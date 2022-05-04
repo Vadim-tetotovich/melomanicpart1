@@ -34,6 +34,7 @@ public class playFragment extends Fragment {
     private String mParam2;
     private View playView;
     Dialog popup;
+    SharedPreferences sharedPreferences;
 
     public playFragment() {
         // Required empty public constructor
@@ -73,7 +74,7 @@ public class playFragment extends Fragment {
                              Bundle savedInstanceState) {
         playView = inflater.inflate(R.layout.fragment_play, container, false);
 
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+         sharedPreferences = this.getActivity().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
 
         View.OnClickListener onClickListener = view -> {
             String description = (String) view.getContentDescription();

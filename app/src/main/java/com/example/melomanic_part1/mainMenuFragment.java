@@ -102,7 +102,6 @@ public class mainMenuFragment extends Fragment {
     }
 
     Button.OnClickListener onClickListener = view -> {
-
         Button b = (Button) view;
         String text = (String) b.getText();
 

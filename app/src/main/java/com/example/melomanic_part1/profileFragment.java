@@ -96,7 +96,6 @@ public class profileFragment extends Fragment {
         });
 
         checkedAvatarImage();
-
         setImageBtnAvatars();
 
         nameText.setText("Hello, " + personName + "!");

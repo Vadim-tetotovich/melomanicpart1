@@ -48,6 +48,7 @@ public class playMusic extends AppCompatActivity {
     ProgressBar songProgressBar;
     Handler handlerProgress;
     ImageView sticker183, sticker200;
+    final int thousand = 1000;
 
     ArrayList<String> guessedSongs = new ArrayList<>();
     ArrayList<String> musicTitles = new ArrayList<>();
@@ -217,7 +218,7 @@ public class playMusic extends AppCompatActivity {
         } else if (currentProgress <= 2000) {
             scoreValueS = scoreValueS + 10;
         } else if (currentProgress > 2000 && currentProgress < 8500) {
-            scoreValueS = scoreValueS + ((int) (10 - Math.floor(currentProgress / 1000)) + 2);
+            scoreValueS = scoreValueS + ((int) (10 - Math.floor(currentProgress / thousand)) + 2);
         }
     }
 
