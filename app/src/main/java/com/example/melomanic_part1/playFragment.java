@@ -1,9 +1,12 @@
 package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +33,7 @@ public class playFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private View playView;
+    Dialog popup;
 
     public playFragment() {
         // Required empty public constructor
@@ -82,6 +86,12 @@ public class playFragment extends Fragment {
             startActivity(intent);
         };
 
+        View.OnClickListener onClickListenerPopup = view -> {
+            popup = new Dialog(getActivity());
+            popupWork(popup);
+            popup.show();
+        };
+
         this.playView = inflater.inflate(R.layout.fragment_play, container, false);
 
         rockBtn =  this.playView.findViewById(R.id.rockPlayBtn);
@@ -97,14 +107,20 @@ public class playFragment extends Fragment {
         hiphopBtn = this.playView.findViewById(R.id.hiphopPlayBtn);
         hiphopBtn.setOnClickListener(onClickListener);
         btn2000s = this.playView.findViewById(R.id.s2000PlayBtn);
-        btn2000s.setOnClickListener(onClickListener);
+        btn2000s.setOnClickListener(onClickListenerPopup);
         btn2010s = this.playView.findViewById(R.id.s2010PlayBtn);
-        btn2010s.setOnClickListener(onClickListener);
+        btn2010s.setOnClickListener(onClickListenerPopup);
         btn90s = this.playView.findViewById(R.id.s90PlayBtn);
-        btn90s.setOnClickListener(onClickListener);
+        btn90s.setOnClickListener(onClickListenerPopup);
         btn80s = this.playView.findViewById(R.id.s80PlayBtn);
-        btn80s.setOnClickListener(onClickListener);
+        btn80s.setOnClickListener(onClickListenerPopup);
 
         return playView;
+    }
+
+    private void popupWork(Dialog popup) {
+        popup.setContentView(R.layout.custom_popup);
+        popup.setCanceledOnTouchOutside(true);
+        popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 }

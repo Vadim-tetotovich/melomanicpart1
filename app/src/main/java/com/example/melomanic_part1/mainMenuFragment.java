@@ -1,9 +1,12 @@
 package com.example.melomanic_part1;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +37,7 @@ public class mainMenuFragment extends Fragment {
     Button button1, button2, button3;
     int imgRes;
     String sharedBtn1, sharedBtn2, sharedBtn3;
+    Dialog popup;
 
     public mainMenuFragment() {
         // Required empty public constructor
@@ -98,16 +102,31 @@ public class mainMenuFragment extends Fragment {
     }
 
     Button.OnClickListener onClickListener = view -> {
+
         Button b = (Button) view;
         String text = (String) b.getText();
-        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("thisGenre", text);
-        editor.apply();
 
-        getActivity().finish();
-        Intent intent = new Intent(getActivity(),playMusic.class);
-        startActivity(intent);
+        if (text.equals("2010s") || text.equals("2000s") || text.equals("90s") || text.equals("80s")) {
+            popup = new Dialog(getActivity());
+            popupWork(popup);
+            popup.show();
+        } else {
+            @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("thisGenre", text);
+            editor.apply();
+
+            getActivity().finish();
+            Intent intent = new Intent(getActivity(),playMusic.class);
+            startActivity(intent);
+        }
+
     };
+
+    private void popupWork(Dialog popup) {
+        popup.setContentView(R.layout.custom_popup);
+        popup.setCanceledOnTouchOutside(true);
+        popup.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    }
 
     private void setIconForBtn(String sharedBtn, Button button) {
         switch (sharedBtn) {

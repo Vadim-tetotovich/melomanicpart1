@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="313dp"
+    android:layout_height="218dp"
+    android:layout_gravity="center"
+    android:background="@drawable/custop_popup_background">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="210dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/textView32"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/circularb_medium"
+        android:text="Эти уровни появятся только в следующей версии!"
+        android:textColor="@color/categories_title"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/circularb_medium"
+        android:text="CEO “Banda”"
+        android:textColor="@color/categories_title"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView29"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="49dp"
+        android:fontFamily="@font/circularb_medium"
+        android:text=" Бондарчук В.В"
+        android:textColor="@color/choose_btn_backcolor_active"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        android:layout_height="193dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="3dp"
+        app:srcCompat="@drawable/vazon" />
+</RelativeLayout>
