@@ -541,6 +541,206 @@
   "Russian": {
     "music": [
       {
+        "musicName": "Девочка-Пай",
+        "src": "devochka_pay"
+      },
+      {
+        "musicName": "Бесприданница",
+        "src": "bespridannitsa"
+      },
+      {
+        "musicName": "Это Пройдет",
+        "src": "eto_proydet"
+      },
+      {
+        "musicName": "Этот Город",
+        "src": "etot_gorod"
+      },
+      {
+        "musicName": "Хоп Мусорок",
+        "src": "hop_musorok"
+      },
+      {
+        "musicName": "Каждый Раз",
+        "src": "kazhdiy_raz"
+      },
+      {
+        "musicName": "Кладбище Самолетов",
+        "src": "kladbishe_samoletov"
+      },
+      {
+        "musicName": "Корабли",
+        "src": "korably"
+      },
+      {
+        "musicName": "Лбтд",
+        "src": "lbtd"
+      },
+      {
+        "musicName": "Любите Девушки",
+        "src": "lubite_devushki"
+      },
+      {
+        "musicName": "Люди",
+        "src": "ludy"
+      },
+      {
+        "musicName": "3-е Сентября",
+        "src": "m3e_sentyabrya"
+      },
+      {
+        "musicName": "Молитва",
+        "src": "molitva"
+      },
+      {
+        "musicName": "Наперегонки С Ветором",
+        "src": "naperegonky_s_vetrom"
+      },
+      {
+        "musicName": "Пламенный Свет",
+        "src": "plamenny_svet"
+      },
+      {
+        "musicName": "Проститься",
+        "src": "prostitsya"
+      },
+      {
+        "musicName": "Районы-Кварталы",
+        "src": "rayouny_kvartaly"
+      },
+      {
+        "musicName": "Ресницы",
+        "src": "resnitsy"
+      },
+      {
+        "musicName": "Рок-н-ролл Мёртв",
+        "src": "rock_n_roll_mertv"
+      },
+      {
+        "musicName": "Sid & Nancy",
+        "src": "sid_nancy"
+      },
+      {
+        "musicName": "Такие Девчонки",
+        "src": "takie_devchonky"
+      },
+      {
+        "musicName": "Весь Этот Бред",
+        "src": "ves_etot_bred"
+      },
+      {
+        "musicName": "Владимирский Централ",
+        "src": "vladimirskiy_central"
+      },
+      {
+        "musicName": "Вне Зоны Доступа",
+        "src": "vne_zony_dostupa"
+      },
+      {
+        "musicName": "Всё Решено",
+        "src": "vse_resheno"
+      },
+      {
+        "musicName": "Я Хочу Быть С Тобой",
+        "src": "ya_hochu_byt_s_toboy"
+      },
+      {
+        "musicName": "Я Так Соскучился",
+        "src": "ya_tak_soskuchilsya"
+      },
+      {
+        "musicName": "Знаешь Ли Ты",
+        "src": "znaesh_li_ty"
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
+        "musicName": "",
+        "src": ""
+      },
+      {
         "musicName": "",
         "src": ""
       },
