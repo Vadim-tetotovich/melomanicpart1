@@ -613,7 +613,7 @@
         "src": "resnitsy"
       },
       {
-        "musicName": "Рок-н-ролл Мёртв",
+        "musicName": "Рок-н-ролл Мертв",
         "src": "rock_n_roll_mertv"
       },
       {
@@ -637,7 +637,7 @@
         "src": "vne_zony_dostupa"
       },
       {
-        "musicName": "Всё Решено",
+        "musicName": "Все Решено",
         "src": "vse_resheno"
       },
       {
@@ -653,100 +653,112 @@
         "src": "znaesh_li_ty"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Август",
+        "src": "avgust"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Баночка С Окурками",
+        "src": "banochka_s_okurkami"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Батарейка",
+        "src": "batareyka"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Будем Вместе",
+        "src": "budem_vmeste"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Чувства",
+        "src": "chuvstva"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Едем В Крым",
+        "src": "edem_v_krim"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Голливуд",
+        "src": "gollivud"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Город Сочи",
+        "src": "gorod_sochi"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Хочешь",
+        "src": "hochesh"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Кто Ты",
+        "src": "kto_ty"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Малиновая Лада",
+        "src": "malinovaya_lada"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Наше Лето",
+        "src": "nashe_leto"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Натали",
+        "src": "natali"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Небеса",
+        "src": "nebesa"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Нервы",
+        "src": "nervi"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Нет Мира Без Тебя",
+        "src": "net_mira_bez_tebya"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Невеста",
+        "src": "nevesta"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Он Был Старше Ее",
+        "src": "on_bil_starshe_ee"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Пора Возвращаться Домой",
+        "src": "pora_vozvraschatsa_domoi"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Темно-Оранжевый Закат",
+        "src": "temno_oranzhevii_zakat"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Пропадаю Я",
+        "src": "propadayu_ya"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Самая Самая",
+        "src": "samaya_samaya"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Синоптик",
+        "src": "sinoptik"
       },
       {
-        "musicName": "",
-        "src": ""
+        "musicName": "Танцуй",
+        "src": "tancyi"
+      },
+      {
+        "musicName": "В Диапозоне",
+        "src": "v_diapazone"
+      },
+      {
+        "musicName": "Вахтерам",
+        "src": "vaxteram"
+      },
+      {
+        "musicName": "Вселенная Бесконечна",
+        "src": "vselennaya_beskonechna"
       }
     ]
   },
