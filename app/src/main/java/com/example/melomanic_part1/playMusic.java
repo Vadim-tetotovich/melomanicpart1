@@ -141,6 +141,20 @@ public class playMusic extends AppCompatActivity {
         levelValue++;
     }
 
+    @Override
+    public void onBackPressed() {
+         mPlayer.stop();
+         finish();
+         super.onBackPressed();
+    }
+
+    @Override
+    protected void onUserLeaveHint() {
+        mPlayer.stop();
+        finish();
+        super.onUserLeaveHint();
+    }
+
     private void progressBarSong() {
         mPlayer.start();
 
